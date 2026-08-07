@@ -540,11 +540,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                 activity.startActivity(intent)
             }
         }
-        // Report connection to API
-        val userId = shareViewModel.userLiveData.value?.id ?: ""
-        if (userId.isNotEmpty()) {
-            ConnectionTracker.reportConnect(requireContext(), userId, server.ipAddress ?: "", "ikev2")
-        }
+        // IKEv2 больше не репортим в API: онлайн IKEv2 сервер считает сам
+        // по метрикам серверов (node_exporter, ipsec_clients).
     }
 
     private fun disconnectTo(profile: VpnProfile) {
@@ -565,11 +562,7 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             }
             activity.startActivity(intent)
         }
-        // Report disconnection to API
-        val userId = shareViewModel.userLiveData.value?.id ?: ""
-        if (userId.isNotEmpty()) {
-            ConnectionTracker.reportDisconnect(requireContext(), userId)
-        }
+        // IKEv2 disconnect больше не репортим в API (см. connectTo).
     }
 
     private fun checkAndShowAppUpdate() {
@@ -1258,11 +1251,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             putExtra(VpnProfileControlActivity.EXTRA_VPN_PROFILE_ID, server.uuid)
         }
         activity.startActivity(intent)
-        // Report connection to API
-        val userId = shareViewModel.userLiveData.value?.id ?: ""
-        if (userId.isNotEmpty()) {
-            ConnectionTracker.reportConnect(requireContext(), userId, server.ipAddress ?: "", "ikev2")
-        }
+        // IKEv2 больше не репортим в API: онлайн IKEv2 сервер считает сам
+        // по метрикам серверов (node_exporter, ipsec_clients).
     }
 
     //endregion

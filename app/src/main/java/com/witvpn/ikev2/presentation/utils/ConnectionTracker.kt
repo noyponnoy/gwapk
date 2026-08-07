@@ -7,6 +7,13 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import timber.log.Timber
 
+/**
+ * Репортинг подключений в API (connect / heartbeat / disconnect).
+ *
+ * ВАЖНО: используется ТОЛЬКО для VLESS и AWG.
+ * Для IKEv2 клиент больше НИЧЕГО не шлёт — онлайн IKEv2 сервер API считает
+ * сам, опрашивая каждый IKEv2-сервер напрямую (node_exporter, ipsec_clients).
+ */
 object ConnectionTracker {
     private val client = OkHttpClient.Builder()
         .addInterceptor(com.witvpn.ikev2.presentation.utils.interceptor.ModifyRequestInterceptor())
@@ -15,6 +22,14 @@ object ConnectionTracker {
     private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
 
     fun reportConnect(context: Context, userId: String, serverIp: String, protocol: String = "ikev2") {
+        if (protocol.equals("ikev2", ignoreCase = true)) {
+            // IKEv2 не репортим: онлайн считается на стороне API по метрикам
+            // самих серверов. Останавливаем возможный heartbeat от прошлой
+            // VLESS/AWG-сессии и выходим.
+            stopHeartbeat()
+            Timber.d("ConnectionTracker: ikev2 connect not reported (server-side metrics)")
+            return
+        }
         scope.launch {
             try {
                 val body = FormBody.Builder()
