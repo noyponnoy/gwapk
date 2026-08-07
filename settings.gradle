@@ -1,0 +1,4 @@
+include ':app'
+include ':vyom-tun-sdk'
+include ':amneziawg-tunnel'
+rootProject.name = "Strong VPN"
