@@ -23,10 +23,12 @@
 
         <!--
              Everything above the search field lives in this block, so the
-             screen can collapse it while the keyboard is shown: the search
-             field then sits at the top of the visible area and the filtered
-             app list gets all the space left above the IME
-             (see SplitTunnelFragment.applyHeaderState).
+             screen can collapse it in the expanded (full-screen list) state:
+             the search field then sits at the top of the visible area and
+             the app list gets all the remaining space. The state is entered
+             by scrolling the list or focusing the search field and is left
+             via the back arrow next to the field or the system Back gesture
+             (see SplitTunnelFragment.applyHeaderState / setExpanded).
         -->
         <LinearLayout
             android:id="@+id/collapsing_header"
@@ -277,47 +279,76 @@
 
         </LinearLayout>
 
+        <!--
+             Search row. In the expanded (full-screen list) state the header
+             above is collapsed, so a back arrow appears to the left of the
+             field — it is the visible way back to the normal screen (the
+             system Back gesture works as well, see the OnBackPressedCallback
+             in SplitTunnelFragment).
+        -->
         <LinearLayout
-            android:id="@+id/search_container"
+            android:id="@+id/search_row"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/bg_input"
             android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingHorizontal="12dp">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:importantForAccessibility="no"
-                android:src="@drawable/ic_search_glass" />
-
-            <EditText
-                android:id="@+id/search_input"
-                style="@style/Callout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:hint="@string/search"
-                android:imeOptions="actionSearch"
-                android:importantForAutofill="no"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textColor="@color/white"
-                android:textColorHint="#8C9197" />
-
-            <ImageView
-                android:id="@+id/clear_search"
+                android:id="@+id/btn_exit_expanded"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/split_tunnel_clear_search"
-                android:padding="4dp"
-                android:src="@drawable/ic_close"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/split_tunnel_back"
+                android:padding="6dp"
+                android:src="@drawable/ic_arrow_left"
                 android:visibility="gone"
                 tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_search_glass" />
+
+                <EditText
+                    android:id="@+id/search_input"
+                    style="@style/Callout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textColorHint="#8C9197" />
+
+                <ImageView
+                    android:id="@+id/clear_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/split_tunnel_clear_search"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_close"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

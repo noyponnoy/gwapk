@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewTreeObserver
 import android.view.inputmethod.EditorInfo
 import android.widget.ImageView
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -41,11 +42,15 @@ import dagger.hilt.android.AndroidEntryPoint
  * and is applied by every VPN backend (IKEv2, VLESS/Hysteria2, AmneziaWG) on the
  * next tunnel establishment.
  *
- * Search UX: while the soft keyboard is on screen the header block (title,
- * description, mode card) is collapsed, so the search field moves to the top
- * of the visible area and the live-filtered app list occupies everything
- * between the field and the keyboard — the user sees the query and the
- * results at the same time. See [initSearchUx].
+ * Expanded (full-screen list) UX: the header block (title, description, mode
+ * card) can be collapsed so the app list takes the whole screen. The state is
+ * entered automatically when the user starts scrolling the list or focuses
+ * the search field, and is left explicitly — via the back arrow that appears
+ * to the left of the search field or via the system Back gesture. Closing
+ * the keyboard does NOT collapse the list back: the keyboard visibility and
+ * the expanded state are independent, so after searching the user can hide
+ * the keyboard and keep picking apps on the full screen.
+ * See [initSearchUx] and [setExpanded].
  */
 @AndroidEntryPoint
 class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fragment_split_tunnel) {
@@ -56,8 +61,20 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
 
     private val radioInactiveTint = ColorStateList.valueOf(0xFF5A5F6A.toInt())
 
-    /** Last known soft-keyboard visibility; drives the collapsing header. */
+    /** Last known soft-keyboard visibility. */
     private var imeVisible = false
+
+    /**
+     * Whether the screen is in the expanded (full-screen list) state: the
+     * header is collapsed, the search row is pinned to the top with a back
+     * arrow, and the system Back gesture collapses the state instead of
+     * leaving the screen. Independent from [imeVisible] — hiding the
+     * keyboard keeps the list full-screen.
+     */
+    private var expanded = false
+
+    /** Consumes the system Back gesture while [expanded] is true. */
+    private var backCallback: OnBackPressedCallback? = null
 
     /**
      * The view the keyboard watcher is attached to. Kept as a plain reference
@@ -78,6 +95,21 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
             } catch (e: Exception) {
                 // Navigation state may be invalid
             }
+        }
+
+        // Back arrow next to the search field: leaves the expanded
+        // (full-screen list) state and restores the header.
+        binding.btnExitExpanded.setOnClickListener { exitExpandedState() }
+
+        // The system Back gesture must do the same instead of leaving the
+        // whole screen. When the keyboard is open, Back is consumed by the
+        // IME first (closing it), so the callback fires on the next press.
+        backCallback = object : OnBackPressedCallback(false) {
+            override fun handleOnBackPressed() {
+                exitExpandedState()
+            }
+        }.also {
+            requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, it)
         }
 
         binding.modeOff.setOnClickListener { viewModel.setMode(SplitTunnelMode.OFF) }
@@ -108,16 +140,22 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
     }
 
     /**
-     * Keyboard-aware behaviour of the search block:
+     * Keyboard- and scroll-aware behaviour of the search block:
      *  1. the root view absorbs the IME inset, so on edge-to-edge devices
      *     (Android 15+ / targetSdk 35, where adjustResize no longer resizes
      *     the window) the content shrinks instead of being covered;
-     *  2. while the keyboard is shown the header is collapsed — the search
-     *     field is pinned to the top and the list gets the remaining space;
+     *  2. focusing the search field (or any keyboard appearance) switches
+     *     the screen into the expanded state — the search field is pinned to
+     *     the top and the list gets all the remaining space;
      *  3. the keyboard is dismissed by scrolling the list, tapping outside
-     *     the search field, or pressing the IME search action. Tapping an app
+     *     the search field, or pressing the IME search action — but the list
+     *     stays full-screen; collapsing back is an explicit action (the back
+     *     arrow next to the field or the system Back gesture). Tapping an app
      *     row keeps the keyboard: the user can tick several found apps in a
-     *     row without re-opening it.
+     *     row without re-opening it;
+     *  4. starting to scroll the list on the normal screen also enters the
+     *     expanded state, so browsing the full app catalog immediately gives
+     *     the whole screen to the list.
      */
     @SuppressLint("ClickableViewAccessibility")
     private fun initSearchUx() {
@@ -184,11 +222,16 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
             }
         }
 
-        // 4. Dismiss the keyboard when the user starts browsing the results…
+        // 4. Scrolling the list dismisses the keyboard (the user is browsing
+        // the results now) and expands the list to the full screen — both on
+        // the normal screen and during a search.
         binding.appsList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                if (newState == RecyclerView.SCROLL_STATE_DRAGGING && imeVisible) {
-                    dismissKeyboard()
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    if (imeVisible) {
+                        dismissKeyboard()
+                    }
+                    setExpanded(true)
                 }
             }
         })
@@ -218,24 +261,54 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
         if (imeVisible == visible) return
         imeVisible = visible
         if (view == null) return
-        applyHeaderState(animate = true)
-        if (!visible) {
+        if (visible) {
+            // Opening the keyboard always switches to the full-screen list,
+            // so the query and the live-filtered results are seen together.
+            setExpanded(true)
+        } else {
             // The keyboard was closed by any means (Back, IME action, scroll):
             // release the focus so the cursor does not linger in the field.
+            // The list intentionally STAYS full-screen — collapsing back is
+            // an explicit action (back arrow / system Back gesture).
             binding.searchInput.clearFocus()
         }
     }
 
     /**
-     * Shows/hides the block above the search field. While the keyboard is on
-     * screen the block is collapsed: the search field moves to the top of the
-     * visible area and the app list below it takes the rest of the space, so
-     * the user sees the query and the live-filtered results simultaneously.
+     * Switches the expanded (full-screen list) state. While expanded the
+     * header block is hidden, the search row is pinned to the top with a
+     * back arrow next to it, and the system Back gesture collapses the state
+     * instead of leaving the screen.
+     */
+    private fun setExpanded(value: Boolean, animate: Boolean = true) {
+        if (expanded == value) return
+        expanded = value
+        backCallback?.isEnabled = value
+        if (view == null) return
+        applyHeaderState(animate)
+    }
+
+    /** Leaves the full-screen list: closes the keyboard, restores the header. */
+    private fun exitExpandedState() {
+        dismissKeyboard()
+        setExpanded(false)
+    }
+
+    /**
+     * Shows/hides the block above the search field. In the expanded state
+     * the block is collapsed: the search row moves to the top of the visible
+     * area (gaining a back arrow) and the app list below it takes the rest
+     * of the space.
      */
     private fun applyHeaderState(animate: Boolean) {
         val selecting = (viewModel.mode.value ?: SplitTunnelMode.OFF) != SplitTunnelMode.OFF
-        val headerVisible = !(imeVisible && selecting)
-        if (binding.collapsingHeader.isVisible == headerVisible) return
+        val collapsed = expanded && selecting
+        val headerVisible = !collapsed
+        if (binding.collapsingHeader.isVisible == headerVisible &&
+            binding.btnExitExpanded.isVisible == collapsed
+        ) {
+            return
+        }
         if (animate) {
             val transition = AutoTransition()
             transition.setOrdering(TransitionSet.ORDERING_TOGETHER)
@@ -246,6 +319,7 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
             TransitionManager.beginDelayedTransition(binding.contentContainer, transition)
         }
         binding.collapsingHeader.isVisible = headerVisible
+        binding.btnExitExpanded.isVisible = collapsed
     }
 
     private fun dismissKeyboard() {
@@ -299,11 +373,17 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
             )
         }
 
-        binding.searchContainer.isVisible = selecting
+        binding.searchRow.isVisible = selecting
         binding.appsList.isVisible = selecting
         binding.offState.isVisible = !selecting
         binding.progress.isVisible = selecting && loading
         binding.emptyView.isVisible = selecting && !loading && apps != null && apps.isEmpty()
+
+        // Switching to OFF leaves the expanded state: the list is gone, so
+        // the full-screen mode (and its Back interception) makes no sense.
+        if (!selecting && expanded) {
+            setExpanded(false, animate = false)
+        }
 
         // Keep the collapsing header consistent with the mode (e.g. the
         // keyboard cannot stay "expanded over" the OFF placeholder).
@@ -341,6 +421,10 @@ class SplitTunnelFragment : BaseFragment<FragmentSplitTunnelBinding>(R.layout.fr
         keyboardWatcher = null
         keyboardWatcherRoot = null
         imeVisible = false
+        expanded = false
+        // Registered with viewLifecycleOwner, so it is removed automatically;
+        // only the reference is released here.
+        backCallback = null
         adapter = null
         super.onDestroyView()
     }
