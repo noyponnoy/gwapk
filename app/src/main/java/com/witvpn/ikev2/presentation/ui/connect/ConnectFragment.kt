@@ -18,6 +18,8 @@ import com.witvpn.ikev2.databinding.FragmentConnect2Binding
 import com.witvpn.ikev2.domain.model.Server
 import com.witvpn.ikev2.domain.model.Server.Companion.isAutoConnect
 import com.witvpn.ikev2.domain.model.Status
+import com.witvpn.ikev2.features.splittunnel.SplitTunnelMode
+import com.witvpn.ikev2.features.splittunnel.SplitTunnelStore
 import com.witvpn.ikev2.presentation.CasAds
 import com.witvpn.ikev2.presentation.base.BaseFragment
 import com.witvpn.ikev2.presentation.ui.MainDelegate
@@ -247,8 +249,40 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         }
     }
 
+    /**
+     * Горячая кнопка Split Tunneling на главном экране: обновляет текст
+     * статуса (выкл / N приложений) по данным SplitTunnelStore.
+     * Вызывается из initView и onResume (после возврата из раздела
+     * туннелирования статус сразу актуализируется).
+     */
+    private fun updateSplitTunnelBadge() {
+        if (!isAdded) return
+        val ctx = context ?: return
+        try {
+            val mode = SplitTunnelStore.getEffectiveMode(ctx)
+            val count = when (mode) {
+                SplitTunnelMode.ONLY_SELECTED -> SplitTunnelStore.getAllowedPackagesSorted(ctx).size
+                SplitTunnelMode.EXCEPT_SELECTED -> SplitTunnelStore.getDisallowedPackagesSorted(ctx).size
+                SplitTunnelMode.OFF -> 0
+            }
+            val active = mode != SplitTunnelMode.OFF && count > 0
+            if (active) {
+                binding.tvSplitTunnelStatus.text = getString(R.string.split_tunnel_quick_on, count)
+                binding.tvSplitTunnelStatus.setTextColor(Color.WHITE)
+                binding.splitTunnelIcon.imageTintList = ColorStateList.valueOf(Color.WHITE)
+            } else {
+                binding.tvSplitTunnelStatus.text = getString(R.string.split_tunnel_quick_off)
+                binding.tvSplitTunnelStatus.setTextColor(0xFF8C9197.toInt())
+                binding.splitTunnelIcon.imageTintList = ColorStateList.valueOf(0xFF8C9197.toInt())
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "updateSplitTunnelBadge failed")
+        }
+    }
+
     override fun onResume() {
         super.onResume()
+        updateSplitTunnelBadge()
         val ctx = context ?: return
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             VyomVpnManager.registerListener(ctx, vyomListener)
@@ -334,6 +368,16 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         binding.btnServers.setOnClickListener {
             if (isVlessMode) showVlessServers() else openServerList()
         }
+        // Горячая кнопка туннелирования: с главного экрана сразу в раздел
+        // Split Tunneling (тот же экран, что открывается из профиля)
+        binding.btnSplitTunnel.setOnClickListener {
+            try {
+                findNavController().navigate(R.id.splitTunnelFragment)
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to open split tunnel screen")
+            }
+        }
+        updateSplitTunnelBadge()
         binding.tvProtocolHint.setOnClickListener {
             context?.let { ProtocolInfoDialog(it).show() }
         }

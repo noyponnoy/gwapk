@@ -392,6 +392,8 @@
     <string name="split_tunnel_apps_bypass">Apps that bypass the VPN</string>
     <string name="split_tunnel_off_state">Split tunneling is off.\nAll traffic goes through the VPN tunnel.</string>
     <string name="split_tunnel_only_empty">No apps selected yet — all traffic still goes through the VPN</string>
+    <string name="split_tunnel_quick_off">Tunneling: off</string>
+    <string name="split_tunnel_quick_on">Tunneling: %1$d apps</string>
     <string name="account_key">Account key</string>
     <string name="save_info">Save info, don\'t lose access</string>
     <string name="manage_subscription">Manage subscription</string>

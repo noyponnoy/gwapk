@@ -470,6 +470,8 @@
     <string name="split_tunnel_apps_bypass">Приложения в обход VPN</string>
     <string name="split_tunnel_off_state">Раздельное туннелирование выключено.\nВесь трафик идёт через VPN-туннель.</string>
     <string name="split_tunnel_only_empty">Приложения не выбраны — весь трафик пока идёт через VPN</string>
+    <string name="split_tunnel_quick_off">Туннелирование: выкл</string>
+    <string name="split_tunnel_quick_on">Туннелирование: %1$d прил.</string>
     <string name="account_key">Ключ аккаунта</string>
     <string name="save_info">Сохраните, чтобы не потерять доступ</string>
     <string name="manage_subscription">Управление подпиской</string>
