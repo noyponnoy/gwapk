@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.witvpn.ikev2.R
 import com.witvpn.ikev2.features.splittunnel.SplitTunnelStore
+import com.witvpn.ikev2.presentation.utils.RemoteConfigManager
 import io.github.vyomtunnel.sdk.VyomVpnManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -17,17 +18,26 @@ import okhttp3.Request
 
 object VlessManager {
     private const val TAG = "VlessManager"
-    private const val SUBSCRIPTION_URL = "https://sub.gw-vpn.click/jzp2_Fc1rqXDrBu1"
-    
+    // Домен подписки больше НЕ зашит здесь — он берётся из Firebase Remote Config
+    // (ключ subscription_url) через RemoteConfigManager. Дефолт (если Firebase
+    // недоступен) лежит в res string subscription_url и совпадает со старым
+    // «зашитым» адресом. Это позволяет менять домен «на лету» из консоли Firebase
+    // при блокировке, без выпуска обновления в Google Play.
+
     var vlessServers: List<VlessConfig> = emptyList()
     var selectedServer: VlessConfig? = null
-    
+
     private val client = OkHttpClient()
 
-    fun fetchSubscription(callback: (Boolean) -> Unit) {
+    fun fetchSubscription(context: Context, callback: (Boolean) -> Unit) {
+        // Резолвим актуальный домен подписки ДО ухода в фон и держим только
+        // applicationContext, чтобы не удерживать Activity/Fragment в GlobalScope.
+        val appContext = context.applicationContext
+        val subscriptionUrl = RemoteConfigManager.getSubscriptionUrl(appContext)
         GlobalScope.launch(Dispatchers.IO) {
             try {
-                val request = Request.Builder().url(SUBSCRIPTION_URL).build()
+                Log.i(TAG, "Fetching subscription from: $subscriptionUrl")
+                val request = Request.Builder().url(subscriptionUrl).build()
                 val response = client.newCall(request).execute()
                 val body = response.body?.string() ?: ""
                 

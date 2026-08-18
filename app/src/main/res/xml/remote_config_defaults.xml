@@ -8,7 +8,8 @@
     приложения без Remote Config остаётся прежним.
 
     Чтобы сменить домен «на лету» — НЕ трогайте этот файл, а измените параметр
-    в консоли Firebase → Remote Config (ключи api_base_url и payment_url).
+    в консоли Firebase → Remote Config (ключи api_base_url, payment_url,
+    subscription_url).
 -->
 <defaultsMap>
     <entry>
@@ -18,5 +19,9 @@
     <entry>
         <key>payment_url</key>
         <value>https://api-gwvpn-app.vpnhub.xyz/vpn/client/payment/new?userId=%s</value>
+    </entry>
+    <entry>
+        <key>subscription_url</key>
+        <value>https://sub.gw-vpn.click/jzp2_Fc1rqXDrBu1</value>
     </entry>
 </defaultsMap>

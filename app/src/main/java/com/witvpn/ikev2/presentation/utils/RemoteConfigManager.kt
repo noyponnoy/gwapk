@@ -12,9 +12,10 @@ import timber.log.Timber
 /**
  * Централизованный источник «живых» доменов приложения.
  *
- * Раньше домены были зашиты в build.gradle:
- *   - base_url         (resValue)      -> API
- *   - GRAYS_BILLING_URL (BuildConfig)  -> оплата
+ * Раньше домены были зашиты в build.gradle / коде:
+ *   - base_url          (resValue)      -> API
+ *   - GRAYS_BILLING_URL (BuildConfig)   -> оплата
+ *   - SUBSCRIPTION_URL  (VlessManager)  -> подписка со списком vless/hy2 нод
  *
  * Теперь актуальные адреса приходят из Firebase Remote Config и могут быть
  * изменены из консоли Firebase без выпуска обновления в Google Play.
@@ -27,13 +28,15 @@ import timber.log.Timber
  *   3) Значение по умолчанию, зашитое в ресурсы/BuildConfig (старое поведение).
  *
  * Ключи Remote Config (их и надо менять в панели Firebase):
- *   - api_base_url  — базовый URL API, напр. https://api.example.com/vpn/api/v1/
- *   - payment_url   — URL оплаты с плейсхолдером %s для userId
+ *   - api_base_url     — базовый URL API, напр. https://api.example.com/vpn/api/v1/
+ *   - payment_url      — URL оплаты с плейсхолдером %s для userId
+ *   - subscription_url — URL подписки со списком vless/hysteria2 нод
  */
 object RemoteConfigManager {
 
     const val KEY_API_BASE_URL = "api_base_url"
     const val KEY_PAYMENT_URL = "payment_url"
+    const val KEY_SUBSCRIPTION_URL = "subscription_url"
 
     private const val PREFS_NAME = "remote_config_cache"
 
@@ -74,6 +77,7 @@ object RemoteConfigManager {
                         // синхронно уже на следующем холодном старте.
                         persist(context, KEY_API_BASE_URL, rc.getString(KEY_API_BASE_URL))
                         persist(context, KEY_PAYMENT_URL, rc.getString(KEY_PAYMENT_URL))
+                        persist(context, KEY_SUBSCRIPTION_URL, rc.getString(KEY_SUBSCRIPTION_URL))
                     } else {
                         Timber.w(task.exception, "RemoteConfig: fetch/activate failed")
                     }
@@ -106,6 +110,22 @@ object RemoteConfigManager {
             context,
             key = KEY_PAYMENT_URL,
             resourceDefault = BuildConfig.GRAYS_BILLING_URL
+        )
+    }
+
+    /**
+     * URL подписки со списком рабочих vless/hysteria2 нод.
+     *
+     * Даёт возможность заменить домен подписки «на лету» из консоли Firebase
+     * (ключ subscription_url), если текущий адрес заблокируют, — без выпуска
+     * нового билда в Google Play. Дефолт совпадает с прежним «зашитым»
+     * значением из VlessManager (res string subscription_url).
+     */
+    fun getSubscriptionUrl(context: Context): String {
+        return resolve(
+            context,
+            key = KEY_SUBSCRIPTION_URL,
+            resourceDefault = context.getString(R.string.subscription_url)
         )
     }
 

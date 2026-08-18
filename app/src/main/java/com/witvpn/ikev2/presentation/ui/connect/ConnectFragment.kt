@@ -895,7 +895,7 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             if (VlessManager.vlessServers.isEmpty()) {
                 binding.connectionTitle.text = getString(R.string.loading_dots)
                 clearConnectionTitleLeadingIcon()
-                VlessManager.fetchSubscription { success ->
+                VlessManager.fetchSubscription(requireContext()) { success ->
                     if (!isAdded) return@fetchSubscription
                     if (success) {
                         updateVlessServerUI()

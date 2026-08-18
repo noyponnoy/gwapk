@@ -43,6 +43,12 @@ android {
 
         resValue("string", "base_url", "https://api-gwvpn-app.vpnhub.xyz/vpn/api/v1/")
 
+        // Ссылка-подписка (subscription) со списком vless/hysteria2 нод.
+        // Как и base_url — это лишь ДЕФОЛТ; актуальное значение приходит из
+        // Firebase Remote Config (ключ subscription_url) и может быть заменено
+        // из консоли Firebase без выпуска обновления в Google Play.
+        resValue("string", "subscription_url", "https://sub.gw-vpn.click/jzp2_Fc1rqXDrBu1")
+
         // CAS.AI application identifier from the CAS dashboard.
         buildConfigField("String", "CAS_ID", '"app.greywebs.vpn"')
 

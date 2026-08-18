@@ -118,7 +118,7 @@ class VlessServersBottomSheet() : BottomSheetDialogFragment() {
             progressBar.show(false)
         } else {
             progressBar.show(true)
-            VlessManager.fetchSubscription { success ->
+            VlessManager.fetchSubscription(requireContext()) { success ->
                 if (!isAdded) return@fetchSubscription
                 progressBar.show(false)
                 if (success) {
