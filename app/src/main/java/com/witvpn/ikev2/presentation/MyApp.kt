@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 import com.witvpn.ikev2.BuildConfig
 import com.witvpn.ikev2.presentation.utils.GooglePlayHelper
+import com.witvpn.ikev2.presentation.utils.RemoteConfigManager
 import com.witvpn.ikev2.presentation.utils.connectivity.ConnectivityProvider
 import dagger.hilt.android.HiltAndroidApp
 import org.strongswan.android.logic.StrongSwanApplication
@@ -30,6 +31,10 @@ open class MyApp : StrongSwanApplication() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
+
+        // Подтягиваем актуальные домены (API / оплата) из Firebase Remote Config.
+        // Делать это надо как можно раньше — до первых сетевых запросов Retrofit.
+        RemoteConfigManager.init(this)
 
         if (isMainProcess()) {
             // Ads only ever render from the UI process; initializing them in the VPN

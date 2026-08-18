@@ -179,6 +179,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging'
+    // Remote Config — динамическое обновление доменов (base_url / payment_url)
+    // без выпуска нового билда в Google Play.
+    implementation 'com.google.firebase:firebase-config-ktx'
 
     // Ads — CAS.AI mediation. The SDK and network adapters are contributed by the
     // 'com.cleveradssolutions.gradle-plugin' plugin via the cas { } block above.

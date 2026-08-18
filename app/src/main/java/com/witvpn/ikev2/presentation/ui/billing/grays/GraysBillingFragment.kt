@@ -8,6 +8,7 @@ import com.witvpn.ikev2.BuildConfig
 import com.witvpn.ikev2.R
 import com.witvpn.ikev2.databinding.FragmentGreysBillingBinding
 import com.witvpn.ikev2.presentation.base.BaseFragment
+import com.witvpn.ikev2.presentation.utils.RemoteConfigManager
 import com.witvpn.ikev2.presentation.utils.getSessionUserId
 
 class GraysBillingFragment: BaseFragment<FragmentGreysBillingBinding>(R.layout.fragment_greys_billing) {
@@ -41,7 +42,9 @@ class GraysBillingFragment: BaseFragment<FragmentGreysBillingBinding>(R.layout.f
 
         getSessionUserId().let { userId ->
             if (userId != null) {
-                binding.webView.loadUrl(BuildConfig.GRAYS_BILLING_URL.format(userId))
+                // URL оплаты берём из Remote Config (fallback — BuildConfig.GRAYS_BILLING_URL).
+                val paymentUrl = RemoteConfigManager.getPaymentUrl(requireContext())
+                binding.webView.loadUrl(paymentUrl.format(userId))
             } else {
                 Toast.makeText(context, "userId not defined", Toast.LENGTH_SHORT).show()
             }

@@ -104,6 +104,7 @@ object ConnectionTracker {
     }
 
     private fun getBaseUrl(context: Context): String {
-        return context.getString(com.witvpn.ikev2.R.string.base_url).removeSuffix("/")
+        // Актуальный домен из Remote Config (с fallback на кэш/дефолт).
+        return RemoteConfigManager.getApiBaseUrl(context).removeSuffix("/")
     }
 }

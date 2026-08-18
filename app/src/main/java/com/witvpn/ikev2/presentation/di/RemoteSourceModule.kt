@@ -7,7 +7,9 @@ import com.google.gson.GsonBuilder
 import com.witvpn.ikev2.BuildConfig
 import com.witvpn.ikev2.R
 import com.witvpn.ikev2.data.remote.ApiService
+import com.witvpn.ikev2.presentation.utils.RemoteConfigManager
 import com.witvpn.ikev2.presentation.utils.interceptor.ApiExceptionInterceptor
+import com.witvpn.ikev2.presentation.utils.interceptor.DynamicBaseUrlInterceptor
 import com.witvpn.ikev2.presentation.utils.interceptor.ModifyRequestInterceptor
 import com.witvpn.ikev2.presentation.utils.interceptor.UnsafeOkHttpClient
 import dagger.Module
@@ -60,13 +62,19 @@ object RemoteSourceModule {
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS)
+            // Подмена домена «на лету» из Remote Config должна происходить ДО
+            // подписи запроса (modifyRequestInterceptor), поэтому добавляем её первой.
+            .addInterceptor(DynamicBaseUrlInterceptor { RemoteConfigManager.getApiBaseUrl(context) })
             .addInterceptor(modifyRequestInterceptor)
             .addInterceptor(logging)
             .addInterceptor(apiExceptionInterceptor)
             .build()
 
+        // baseUrl берётся из Remote Config (или из кэша/дефолта, если конфиг ещё
+        // не скачался). Значение фиксируется на текущий запуск; смена хоста внутри
+        // сессии дополнительно обеспечивается DynamicBaseUrlInterceptor выше.
         return Retrofit.Builder()
-            .baseUrl(context.getString(R.string.base_url))
+            .baseUrl(RemoteConfigManager.getApiBaseUrl(context))
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(okHttpClient)
             .build()
