@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.witvpn.gw'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+        consumerProguardFiles 'consumer-rules.pro'
+        // Match the app abiFilters (armeabi-v7a, arm64-v8a, x86_64) — no x86 in final APK.
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+
+    // --- GW protocol transport -------------------------------------------------
+    // sshj: pure-Java SSH client (BouncyCastle crypto, no native libs).
+    // Used with a custom SocketFactory that performs the HTTP-proxy + payload + SNI
+    // injection ("injector") before the SSH handshake — this is the "GW" core.
+    implementation 'com.hierynomus:sshj:0.39.0'
+
+    // BouncyCastle is pulled transitively by sshj; pin a modern JDK18on build.
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
+
+    // Coroutines for the connection lifecycle.
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+
+    // okhttp only for the (optional) plaintext API fetch helper; the tunnel itself
+    // does not depend on it.
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+}

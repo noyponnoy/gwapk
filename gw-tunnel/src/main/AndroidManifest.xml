@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- GW tunnel needs INTERNET (SSH + proxy) and FOREGROUND_SERVICE for the VpnService. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application>
+        <!--
+          The GW VPN service. foregroundServiceType=specialUse matches the VLESS/AWG modules.
+          On Android 14+ the app must declare a SpecialUse type foreground service in its own
+          manifest too; the merger carries this through. The intent-filter lets the system
+          treat it as the user's VPN (always-on support).
+        -->
+        <service
+            android:name="com.witvpn.gw.tunnel.GwVpnService"
+            android:exported="true"
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_TYPE_SUBCODE"
+                android:value="vpn.tunnel.gw" />
+        </service>
+    </application>
+</manifest>
