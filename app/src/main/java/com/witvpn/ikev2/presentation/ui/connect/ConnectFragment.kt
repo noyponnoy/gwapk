@@ -32,6 +32,7 @@ import com.witvpn.ikev2.presentation.utils.FragmentUtils
 import com.witvpn.ikev2.presentation.utils.InAppReviewHelper
 import com.witvpn.ikev2.presentation.utils.Util
 import com.witvpn.ikev2.presentation.utils.ConnectionTracker
+import com.witvpn.ikev2.presentation.utils.RemoteConfigManager
 import com.witvpn.ikev2.presentation.utils.SharePrefs
 import com.witvpn.ikev2.presentation.utils.parseApiDate
 import com.witvpn.ikev2.presentation.utils.getStringPref
@@ -283,6 +284,11 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     override fun onResume() {
         super.onResume()
         updateSplitTunnelBadge()
+        // Актуализируем видимость IKEv2 (флаг мог обновиться, пока экран был
+        // в фоне) и подписываемся на активацию свежего Remote Config, чтобы
+        // применить значение, если fetch завершится при открытом экране.
+        applyIkev2Visibility()
+        RemoteConfigManager.addOnConfigActivatedListener(remoteConfigActivatedListener)
         val ctx = context ?: return
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             VyomVpnManager.registerListener(ctx, vyomListener)
@@ -314,11 +320,23 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
 
     override fun onPause() {
         super.onPause()
+        RemoteConfigManager.removeOnConfigActivatedListener(remoteConfigActivatedListener)
         try {
             context?.let { VyomVpnManager.unregisterListener(it) }
             AmneziaWGManager.unregisterListener(awgListener)
         } catch (e: Exception) {
             // Listener not registered
+        }
+    }
+
+    /** Применяем свежий Remote Config к UI (видимость IKEv2). */
+    private val remoteConfigActivatedListener: () -> Unit = {
+        if (isAdded && view != null) {
+            try {
+                applyIkev2Visibility()
+            } catch (e: Exception) {
+                // View может быть уже уничтожен — просто игнорируем
+            }
         }
     }
 
@@ -345,7 +363,10 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     override fun initView() {
         updateServerButton(getIkev2Draft())
         setProtocol(resolveInitialProtocol())
-        
+        // Доступность IKEv2 управляется через Firebase Remote Config
+        // (ключ ikev2_enabled, по умолчанию выключен — fail-safe).
+        applyIkev2Visibility()
+
         binding.btnIpv4.setOnClickListener {
             if (isVlessConnected || VyomVpnManager.currentState == VyomState.CONNECTING || AmneziaWGManager.isConnected()) return@setOnClickListener
             val state = viewModel.stateLiveData.value
@@ -379,7 +400,7 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         }
         updateSplitTunnelBadge()
         binding.tvProtocolHint.setOnClickListener {
-            context?.let { ProtocolInfoDialog(it).show() }
+            context?.let { ProtocolInfoDialog(it, showIkev2 = isIkev2Available()).show() }
         }
         binding.btnConnect.setOnClickListener {
             if (isVlessMode) {
@@ -877,10 +898,14 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     }
 
     private fun setProtocol(protocol: String) {
+        // IKEv2 может быть скрыт через Firebase Remote Config (ikev2_enabled).
+        // В этом случае молча уводим пользователя на VLESS.
+        @Suppress("NAME_SHADOWING")
+        val protocol = if (protocol == "IKEv2" && !isIkev2Available()) "VLESS" else protocol
         isVlessMode = protocol == "VLESS"
         isAwgMode = protocol == "AWG"
         putStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, protocol)
-        
+
         if (protocol == "VLESS") {
             binding.btnIpv4.background = null
             binding.btnIpv4.setTextColor(Color.parseColor("#8C9197"))
@@ -957,10 +982,48 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             return "AWG"
         }
 
-        val savedProtocol = getStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, "IKEv2") ?: "IKEv2"
+        // Если IKEv2 скрыт через Remote Config — по умолчанию и вместо
+        // сохранённого выбора "IKEv2" используем VLESS.
+        val fallback = if (isIkev2Available()) "IKEv2" else "VLESS"
+        val savedProtocol = getStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, fallback) ?: fallback
         return when (savedProtocol) {
-            "AWG", "VLESS", "IKEv2" -> savedProtocol
-            else -> "IKEv2"
+            "AWG", "VLESS" -> savedProtocol
+            else -> fallback
+        }
+    }
+
+    /** Активна ли сейчас IKEv2-сессия (подключено или идёт подключение). */
+    private fun isIkev2ActiveNow(): Boolean {
+        val state = viewModel.stateLiveData.value
+        return state == VpnStateService.State.CONNECTED || state == VpnStateService.State.CONNECTING
+    }
+
+    /**
+     * Доступен ли IKEv2 пользователю.
+     *
+     * Основной источник — флаг ikev2_enabled из Firebase Remote Config
+     * (по умолчанию false: при недоступности Firebase или ошибке получения
+     * значения IKEv2 остаётся скрытым). Единственное исключение — уже
+     * активная IKEv2-сессия: её не прячем, чтобы пользователь всегда мог
+     * корректно отключиться; после разрыва соединения протокол скроется.
+     */
+    private fun isIkev2Available(): Boolean {
+        return RemoteConfigManager.isIkev2Enabled() || isIkev2ActiveNow()
+    }
+
+    /**
+     * Показывает/прячет пилюлю IKEv2 в переключателе протоколов согласно
+     * Remote Config. Если IKEv2 скрывается, а выбран именно он — переключает
+     * пользователя на VLESS.
+     */
+    private fun applyIkev2Visibility() {
+        val show = isIkev2Available()
+        binding.btnIpv4.visibility = if (show) View.VISIBLE else View.GONE
+        binding.protocolSelector.weightSum = if (show) 3f else 2f
+        binding.protocolSelector.requestLayout()
+
+        if (!show && !isVlessMode && !isAwgMode) {
+            setProtocol("VLESS")
         }
     }
 

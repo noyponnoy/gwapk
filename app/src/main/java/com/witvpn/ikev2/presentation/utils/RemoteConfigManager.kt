@@ -31,12 +31,18 @@ import timber.log.Timber
  *   - api_base_url     — базовый URL API, напр. https://api.example.com/vpn/api/v1/
  *   - payment_url      — URL оплаты с плейсхолдером %s для userId
  *   - subscription_url — URL подписки со списком vless/hysteria2 нод
+ *   - ikev2_enabled    — показывать ли протокол IKEv2 в интерфейсе (true/false).
+ *                        По умолчанию false: IKEv2 скрыт, пока флаг явно не
+ *                        включён в консоли Firebase. Позволяет одним изменением
+ *                        временно отключить IKEv2 у всех пользователей без
+ *                        выпуска новой версии приложения.
  */
 object RemoteConfigManager {
 
     const val KEY_API_BASE_URL = "api_base_url"
     const val KEY_PAYMENT_URL = "payment_url"
     const val KEY_SUBSCRIPTION_URL = "subscription_url"
+    const val KEY_IKEV2_ENABLED = "ikev2_enabled"
 
     private const val PREFS_NAME = "remote_config_cache"
 
@@ -49,6 +55,23 @@ object RemoteConfigManager {
     private var firebaseAvailable = false
 
     private var remoteConfig: FirebaseRemoteConfig? = null
+
+    /**
+     * Слушатели успешной активации свежего конфига (fetchAndActivate).
+     * Нужны UI, который уже отрисован к моменту завершения сетевого fetch,
+     * чтобы применить новые значения (например, показать/скрыть IKEv2).
+     * Колбэки вызываются на главном потоке.
+     */
+    private val configActivatedListeners =
+        java.util.concurrent.CopyOnWriteArraySet<() -> Unit>()
+
+    fun addOnConfigActivatedListener(listener: () -> Unit) {
+        configActivatedListeners.add(listener)
+    }
+
+    fun removeOnConfigActivatedListener(listener: () -> Unit) {
+        configActivatedListeners.remove(listener)
+    }
 
     /**
      * Инициализация + первичная загрузка конфига. Вызывать один раз из
@@ -78,6 +101,14 @@ object RemoteConfigManager {
                         persist(context, KEY_API_BASE_URL, rc.getString(KEY_API_BASE_URL))
                         persist(context, KEY_PAYMENT_URL, rc.getString(KEY_PAYMENT_URL))
                         persist(context, KEY_SUBSCRIPTION_URL, rc.getString(KEY_SUBSCRIPTION_URL))
+                        // Сообщаем подписчикам (UI), что конфиг обновился.
+                        configActivatedListeners.forEach { listener ->
+                            try {
+                                listener()
+                            } catch (e: Throwable) {
+                                Timber.e(e, "RemoteConfig: listener failed")
+                            }
+                        }
                     } else {
                         Timber.w(task.exception, "RemoteConfig: fetch/activate failed")
                     }
@@ -127,6 +158,35 @@ object RemoteConfigManager {
             key = KEY_SUBSCRIPTION_URL,
             resourceDefault = context.getString(R.string.subscription_url)
         )
+    }
+
+    /**
+     * Показывать ли протокол IKEv2 в интерфейсе.
+     *
+     * Поведение fail-safe («по умолчанию скрыт»):
+     *   - Firebase не инициализировался (нет google-services.json и т.п.) -> false;
+     *   - сетевой fetch не удался и активированного конфига нет            -> false
+     *     (сработает дефолт false из res/xml/remote_config_defaults.xml);
+     *   - любая ошибка чтения значения                                     -> false.
+     *
+     * Единственный способ показать IKEv2 — явно выставить ikev2_enabled = true
+     * в консоли Firebase → Remote Config. Соответственно, одним переключением
+     * этого параметра IKEv2 можно временно скрыть у всех пользователей без
+     * выпуска новой версии приложения.
+     *
+     * Примечание: Firebase сам персистит последний активированный конфиг на
+     * диске, поэтому после первого успешного fetch значение доступно и офлайн.
+     * В SharedPreferences этот флаг сознательно НЕ кэшируется — для флага
+     * доступности протокола безопаснее консервативное поведение.
+     */
+    fun isIkev2Enabled(): Boolean {
+        if (!firebaseAvailable) return false
+        return try {
+            remoteConfig?.getBoolean(KEY_IKEV2_ENABLED) ?: false
+        } catch (e: Throwable) {
+            Timber.e(e, "RemoteConfig: read '$KEY_IKEV2_ENABLED' failed")
+            false
+        }
     }
 
     // --- внутреннее ---

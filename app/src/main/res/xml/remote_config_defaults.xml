@@ -24,4 +24,14 @@
         <key>subscription_url</key>
         <value>https://sub.gw-vpn.click/jzp2_Fc1rqXDrBu1</value>
     </entry>
+    <!--
+        Показывать ли протокол IKEv2 в интерфейсе.
+        По умолчанию ВЫКЛЮЧЕНО (fail-safe): если Firebase недоступен или
+        значение не удалось получить, IKEv2 остаётся скрытым.
+        Управляется из консоли Firebase → Remote Config, ключ ikev2_enabled.
+    -->
+    <entry>
+        <key>ikev2_enabled</key>
+        <value>false</value>
+    </entry>
 </defaultsMap>
