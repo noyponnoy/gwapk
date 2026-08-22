@@ -42,6 +42,14 @@ android {
 dependencies {
     implementation 'androidx.core:core-ktx:1.13.1'
 
+    // Single source of truth for `hev.htproxy.TProxyService` and for the bundled
+    // libhev-socks5-tunnel.so. gw-tunnel used to declare its own copy of that class,
+    // which made D8 fail with
+    //   "Type hev.htproxy.TProxyService is defined multiple times"
+    // once both modules landed in the same APK. The class name is hardcoded in the
+    // C library's JNI_OnLoad, so it must exist exactly once per APK.
+    implementation project(':vyom-tun-sdk')
+
     // --- GW protocol transport -------------------------------------------------
     // sshj: pure-Java SSH client (BouncyCastle crypto, no native libs).
     // Used with a custom SocketFactory that performs the HTTP-proxy + payload + SNI

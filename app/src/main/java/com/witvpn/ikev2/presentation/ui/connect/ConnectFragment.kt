@@ -73,6 +73,7 @@ import com.witvpn.gw.tunnel.GwManager
 import com.witvpn.gw.tunnel.GwState
 import com.witvpn.gw.model.GwServerConfig
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collectLatest
 
@@ -279,6 +280,37 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             bytes < 1024 * 1024 -> String.format("%.1f KB", bytes / 1024.0)
             bytes < 1024 * 1024 * 1024 -> String.format("%.1f MB", bytes / (1024.0 * 1024.0))
             else -> String.format("%.2f GB", bytes / (1024.0 * 1024.0 * 1024.0))
+        }
+    }
+
+    /**
+     * Разрешённые / запрещённые пакеты для передачи в GwVpn.start().
+     *
+     * Возвращает пару (allowed, disallowed), где ровно один элемент может быть
+     * непустым — SplitTunnelStore уже схлопывает вырожденные состояния в OFF,
+     * поэтому при выключенном split tunneling оба значения равны null и туннель
+     * охватывает все приложения. Списки фильтруются по реально установленным
+     * пакетам: неразрешимое имя в addAllowedApplication/addDisallowedApplication
+     * роняет установку туннеля целиком.
+     */
+    private fun getSplitTunnelingApps(ctx: Context): Pair<Array<String>?, Array<String>?> {
+        return try {
+            when (SplitTunnelStore.getEffectiveMode(ctx)) {
+                SplitTunnelMode.ONLY_SELECTED -> {
+                    val allowed = SplitTunnelStore.getInstalledAllowedPackages(ctx)
+                    if (allowed.isEmpty()) null to null
+                    else allowed.toTypedArray() to null
+                }
+                SplitTunnelMode.EXCEPT_SELECTED -> {
+                    val disallowed = SplitTunnelStore.getInstalledDisallowedPackages(ctx)
+                    if (disallowed.isEmpty()) null to null
+                    else null to disallowed.toTypedArray()
+                }
+                SplitTunnelMode.OFF -> null to null
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "getSplitTunnelingApps failed")
+            null to null
         }
     }
 

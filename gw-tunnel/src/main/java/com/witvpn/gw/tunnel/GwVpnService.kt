@@ -18,6 +18,7 @@ import com.witvpn.gw.socks.GwSocks5Server
 import com.witvpn.gw.ssh.GwSshState
 import com.witvpn.gw.ssh.GwSshTunnel
 import com.witvpn.gw.util.GwLog
+import hev.htproxy.TProxyService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -50,10 +51,23 @@ import kotlin.coroutines.CoroutineContext
  *
  * State is broadcast via [GwManager] (a process-wide singleton the app observes), so
  * the existing UI observers wired to the strongSwan VpnStateService can be reused.
+ *
+ * It extends [TProxyService] (which itself extends [VpnService]) rather than VpnService
+ * directly: libhev-socks5-tunnel registers its native methods in JNI_OnLoad against the
+ * hardcoded class name `hev/htproxy/TProxyService`, as *instance* methods. Inheriting
+ * gives us a correctly-registered receiver without a second declaration of that class
+ * (the duplicate previously broke dex merging).
  */
-class GwVpnService : VpnService(), CoroutineScope {
+class GwVpnService : TProxyService(), CoroutineScope {
 
     companion object {
+        init {
+            // vyom-tun-sdk loads this library too, but the GW tunnel can be started
+            // without the Xray/vyom path ever being touched. System.loadLibrary is
+            // idempotent, so loading it again here is safe.
+            runCatching { System.loadLibrary("hev-socks5-tunnel") }
+        }
+
         const val ACTION_START = "com.witvpn.gw.action.START"
         const val ACTION_STOP = "com.witvpn.gw.action.STOP"
         const val EXTRA_CONFIG = "gw_config_json"
@@ -170,7 +184,7 @@ class GwVpnService : VpnService(), CoroutineScope {
 
     private fun runNative(configPath: String, fd: Int) {
         try {
-            HevTunnelNative.TProxyStartService(configPath, fd)
+            TProxyStartService(configPath, fd)
         } catch (e: Throwable) {
             log.e({ "native tunnel exited: ${e.message}" }, e)
             if (running) GwManager.publishError(GwError.GENERIC)
@@ -263,7 +277,7 @@ class GwVpnService : VpnService(), CoroutineScope {
         statsJob = launch {
             var lastRx = 0L; var lastTx = 0L
             while (running) {
-                val stats = runCatching { HevTunnelNative.TProxyGetStats() }.getOrNull()
+                val stats = runCatching { TProxyGetStats() }.getOrNull()
                 if (stats != null && stats.size >= 2) {
                     val rx = stats[0]; val tx = stats[1]
                     GwManager.publishTraffic(rx, tx)
@@ -281,7 +295,7 @@ class GwVpnService : VpnService(), CoroutineScope {
         GwManager.publish(GwState.DISCONNECTING, GwError.NONE)
         runCatching { reconnectJob?.cancel() }
         runCatching { statsJob?.cancel() }
-        runCatching { HevTunnelNative.TProxyStopService() }
+        runCatching { TProxyStopService() }
         runCatching { socks?.stop() }
         runCatching { ssh?.disconnect() }
         runCatching { tun?.close() }
