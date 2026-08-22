@@ -35,6 +35,10 @@
 -keep class com.witvpn.gw.tunnel.GwVpnService { *; }
 
 # Native method of hev-socks5-tunnel (loaded via System.loadLibrary).
+-keep class hev.htproxy.TProxyService {
+    native <methods>;
+    *;
+}
 -keepclasseswithmembernames class * {
     native <methods>;
 }

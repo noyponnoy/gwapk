@@ -17,24 +17,15 @@ import androidx.annotation.Keep
  */
 @Keep
 object HevTunnelNative {
-    private const val TAG = "GW/HevNative"
-    @Volatile private var loaded = false
-
-    init {
-        try {
-            System.loadLibrary("hev-socks5-tunnel")
-            loaded = true
-            Log.i(TAG, "loaded libhev-socks5-tunnel")
-        } catch (e: UnsatisfiedLinkError) {
-            // The .so is also shipped via the vyom-tun-sdk module; if the app already
-            // loaded it from that module's classloader, a second load here can fail.
-            // We tolerate that — the native methods are still resolvable process-wide.
-            Log.w(TAG, "hev-socks5-tunnel already loaded or unavailable: ${e.message}")
-            loaded = true // assume the other module loaded it
-        }
+    fun TProxyStartService(configPath: String, fd: Int) {
+        hev.htproxy.TProxyService.TProxyStartService(configPath, fd)
     }
 
-    @JvmStatic external fun TProxyStartService(configPath: String, fd: Int)
-    @JvmStatic external fun TProxyStopService()
-    @JvmStatic external fun TProxyGetStats(): LongArray?
+    fun TProxyStopService() {
+        hev.htproxy.TProxyService.TProxyStopService()
+    }
+
+    fun TProxyGetStats(): LongArray? {
+        return hev.htproxy.TProxyService.TProxyGetStats()
+    }
 }

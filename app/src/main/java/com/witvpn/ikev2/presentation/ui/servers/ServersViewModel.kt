@@ -28,6 +28,7 @@ class ServersViewModel @Inject constructor(
             val param = mutableMapOf("userId" to user.id as Any)
             serverRepository.getServers(param)
             serverRepository.getServersAwg(param)
+            serverRepository.getServersGw(param, user.id)
         }
         fetchLoad()
     }

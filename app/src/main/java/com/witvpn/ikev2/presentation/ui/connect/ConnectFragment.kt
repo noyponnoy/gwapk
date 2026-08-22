@@ -181,7 +181,13 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     private val gwVpnPrepareLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             pendingGwConfig?.let { cfg ->
-                GwVpn.start(requireContext(), cfg)
+                val ctx = context ?: return@let
+                val (allowed, disallowed) = getSplitTunnelingApps(ctx)
+                GwVpn.start(ctx, cfg, allowed, disallowed)
+                val userId = shareViewModel.userLiveData.value?.id ?: ""
+                if (userId.isNotEmpty()) {
+                    ConnectionTracker.reportConnect(ctx, userId, cfg.ip_address, "gw")
+                }
             }
             pendingGwConfig = null
         } else {
@@ -219,27 +225,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         }
     }
 
-    private val gwStateJob = lifecycleScope.launch {
-        GwManager.state.collectLatest { s ->
-            if (!isAdded) return@collectLatest
-            activity?.runOnUiThread {
-                when (s) {
-                    GwState.CONNECTED -> { showProgress(false); updateVlessState(true) }
-                    GwState.CONNECTING -> { showProgress(true) }
-                    GwState.DISCONNECTING, GwState.DISABLED -> { showProgress(false); updateVlessState(false) }
-                }
-            }
-        }
-    }
-    private val gwTrafficJob = lifecycleScope.launch {
-        GwManager.traffic.collectLatest { (rx, tx) ->
-            if (!isAdded) return@collectLatest
-            activity?.runOnUiThread {
-                binding.tvUpload.text = formatTraffic(tx)
-                binding.tvDownload.text = formatTraffic(rx)
-            }
-        }
-    }
+    private var gwStateJob: Job? = null
+    private var gwTrafficJob: Job? = null
 
     private val vyomListener = object : VyomVpnManager.VyomListener {
         override fun onStateChanged(state: VyomState) {
@@ -377,8 +364,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     override fun onDestroyView() {
         super.onDestroyView()
         handler.removeCallbacksAndMessages(null)
-        gwStateJob.cancel()
-        gwTrafficJob.cancel()
+        gwStateJob?.cancel()
+        gwTrafficJob?.cancel()
     }
 
     private val shareViewModel: ShareViewModel by activityViewModels()
@@ -702,6 +689,30 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     private val viewModel2: ServersViewModel by activityViewModels()
 
     override fun initObserve() {
+        gwStateJob?.cancel()
+        gwStateJob = viewLifecycleOwner.lifecycleScope.launch {
+            GwManager.state.collectLatest { s ->
+                if (!isAdded) return@collectLatest
+                activity?.runOnUiThread {
+                    when (s) {
+                        GwState.CONNECTED -> { showProgress(false); updateVlessState(true) }
+                        GwState.CONNECTING -> { showProgress(true) }
+                        GwState.DISCONNECTING, GwState.DISABLED -> { showProgress(false); updateVlessState(false) }
+                    }
+                }
+            }
+        }
+        gwTrafficJob?.cancel()
+        gwTrafficJob = viewLifecycleOwner.lifecycleScope.launch {
+            GwManager.traffic.collectLatest { (rx, tx) ->
+                if (!isAdded) return@collectLatest
+                activity?.runOnUiThread {
+                    binding.tvUpload.text = formatTraffic(tx)
+                    binding.tvDownload.text = formatTraffic(rx)
+                }
+            }
+        }
+
         shareViewModel.userLiveData.observe(viewLifecycleOwner){
             viewModel2.execute(it)
         }
@@ -1013,8 +1024,27 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             binding.btnAwg.setTextColor(Color.WHITE)
 
             updateAwgServerUI()
+        } else if (protocol == "GW" || protocol == "IKEv2") {
+            clearConnectionTitleLeadingIcon()
+            binding.btnVless.background = null
+            binding.btnVless.setTextColor(Color.parseColor("#8C9197"))
+            binding.btnAwg.background = null
+            binding.btnAwg.setTextColor(Color.parseColor("#8C9197"))
+            binding.btnIpv4.setBackgroundResource(R.drawable.shape_stadium)
+            binding.btnIpv4.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#3F4652"))
+            binding.btnIpv4.setTextColor(Color.WHITE)
+
+            val gwServers = viewModel2.serversGwList.value
+            if (gwServers != null && gwServers.isNotEmpty()) {
+                val s = resolveGwServerForConnection()
+                val first = gwServers.first()
+                binding.connectionTitle.text = s?.proxy_host ?: first.country ?: first.ipAddress
+                binding.connectionLocation.setImageResource(Util.getResId(first.countryCode) ?: R.drawable.ic_globe)
+            } else {
+                updateServerButton(getIkev2Draft())
+            }
         } else {
-            // IKEv2 — сброс лого Hysteria с заголовка
+            // IKEv2 / fallback
             clearConnectionTitleLeadingIcon()
             binding.btnVless.background = null
             binding.btnVless.setTextColor(Color.parseColor("#8C9197"))
@@ -1029,7 +1059,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         
         // Only reset state UI if not currently connected to the selected protocol
         if (!(isVlessMode && VyomVpnManager.currentState == VyomState.CONNECTED) &&
-            !(isAwgMode && AmneziaWGManager.isConnected())) {
+            !(isAwgMode && AmneziaWGManager.isConnected()) &&
+            !(isGwMode && GwManager.isConnected)) {
             binding.tvState.text = getString(R.string.connect)
             changeButtonColor(false)
             showProgress(false)
@@ -1221,7 +1252,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             return
         }
 
-        GwVpn.start(ctx, cfg)
+        val (allowed, disallowed) = getSplitTunnelingApps(ctx)
+        GwVpn.start(ctx, cfg, allowed, disallowed)
         val userId = shareViewModel.userLiveData.value?.id ?: ""
         if (userId.isNotEmpty()) {
             ConnectionTracker.reportConnect(ctx, userId, cfg.ip_address, "gw")
