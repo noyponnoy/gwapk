@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bigo_ad_layout_click_guide"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inter_click_guide_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <sg.bigo.ads.common.view.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/inter_rounded_icon_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:bigo_ad_radius="22dp">
+
+                <ImageView
+                    android:id="@+id/inter_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    tools:ignore="ContentDescription" />
+
+            </sg.bigo.ads.common.view.RoundedFrameLayout>
+
+            <TextView
+                android:id="@+id/inter_tv_slide_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/inter_iv_slide_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="76dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:shadowColor="#66000000"
+                android:shadowDy="0.5"
+                android:shadowRadius="1"
+                android:text="Slide View"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/inter_iv_slide_view"
+                android:layout_width="28dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bigo_ad_landscape_slide_view" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/inter_layout_mask"
+            android:layout_width="75dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/inter_click_guide"
+            android:layout_width="115dp"
+            android:layout_height="120dp"
+            android:layout_alignLeft="@id/inter_layout_mask"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="-120dp"
+            android:src="@drawable/bigo_ad_click_guide_landscape"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</RelativeLayout>

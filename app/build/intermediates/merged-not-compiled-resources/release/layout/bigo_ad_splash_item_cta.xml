@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bigo_ad_splash_btn_cta_container"
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom">
+
+    <View
+        android:id="@+id/splash_footer_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bigo_ad_splash_header_bg"
+        android:rotation="180"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bigo_ad_splash_btn_cta"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bigo_ad_button_bg_rectangle_blue_2"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="@string/bigo_ad_cta_default"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <sg.bigo.ads.common.view.RoundedFrameLayout
+        android:id="@+id/bigo_ad_splash_cta_inner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignStart="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignTop="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignEnd="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignBottom="@id/bigo_ad_splash_btn_cta"
+        android:elevation="2dp"
+        android:visibility="invisible"
+        app:bigo_ad_radius="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bigo_ad_splash_btn_cta_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:layout_gravity="center">
+
+    <View
+        android:id="@+id/splash_footer_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bigo_ad_splash_header_bg"
+        android:rotation="180"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/bigo_ad_splash_btn_cta"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:clickable="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bigo_ad_button_bg_rectangle_green_radius8"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="@string/bigo_ad_cta_default"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:shadowColor="#66000000"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3.0"
+        android:textSize="14sp" />
+
+    <sg.bigo.ads.common.view.RoundedFrameLayout
+        android:id="@+id/bigo_ad_splash_cta_inner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        android:layout_alignStart="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignTop="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignEnd="@id/bigo_ad_splash_btn_cta"
+        android:layout_alignBottom="@id/bigo_ad_splash_btn_cta"
+        android:elevation="2dp"
+        android:visibility="invisible"
+        app:bigo_ad_radius="20dp" />
+
+</RelativeLayout>

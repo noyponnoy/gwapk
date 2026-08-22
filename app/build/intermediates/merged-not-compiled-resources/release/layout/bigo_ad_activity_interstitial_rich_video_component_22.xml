@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:id="@+id/inter_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <sg.bigo.ads.common.view.RoundedImageView
+            android:id="@+id/inter_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/inter_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/inter_icon"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/bigo_ad_title_default"
+            android:textColor="#FF333333"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/inter_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inter_title"
+            android:layout_alignStart="@id/inter_title"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/inter_icon"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:lines="1"
+            android:text="@string/bigo_ad_description_default"
+            android:textColor="#B3333333"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/inter_btn_cta"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/inter_title_container"
+        android:layout_centerHorizontal="true"
+        android:background="#FF009DFF"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="@string/bigo_ad_cta_default"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

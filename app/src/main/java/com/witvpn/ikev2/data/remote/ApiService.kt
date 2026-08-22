@@ -18,6 +18,10 @@ interface ApiService {
     @FormUrlEncoded
     suspend fun getServersAwg(@FieldMap param: MutableMap<String, Any>): com.witvpn.ikev2.data.remote.model.ServersAwgResponse
 
+    @POST("user/server_gw")
+    @FormUrlEncoded
+    suspend fun getServersGw(@FieldMap param: MutableMap<String, Any>): com.witvpn.ikev2.data.remote.model.ServersGwResponse
+
     @POST("user/login")
     @FormUrlEncoded
     suspend fun login(@FieldMap param: MutableMap<String, Any>): LoginResponse

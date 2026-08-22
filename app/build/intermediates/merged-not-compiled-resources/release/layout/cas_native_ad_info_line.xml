@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText,SmallSp">
+
+    <TextView
+        android:id="@+id/cas_native_ad_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="#4285F4"
+        android:textSize="10sp"
+        tools:text="Ad" />
+
+    <TextView
+        android:id="@+id/cas_native_advertiser"
+        style="@style/com.cleveradssolutions.nativeAds.AutoScrollingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="70dp"
+        android:minWidth="40dp"
+        android:paddingHorizontal="2dp"
+        tools:text="Advertiser or brand name" />
+
+    <TextView
+        android:id="@+id/cas_native_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="#80000000"
+        android:textSize="10sp"
+        tools:drawableLeft="@drawable/cas_star"
+        tools:drawableTint="#4285F4"
+        tools:text="4.5" />
+
+    <TextView
+        android:id="@+id/cas_native_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingStart="5dp"
+        android:paddingEnd="2dp"
+        android:singleLine="true"
+        android:textColor="#80000000"
+        android:textSize="10sp"
+        tools:text="Reviews" />
+
+    <TextView
+        android:id="@+id/cas_native_store"
+        style="@style/com.cleveradssolutions.nativeAds.AutoScrollingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="40dp"
+        android:paddingHorizontal="2dp"
+        tools:text="Store" />
+
+</LinearLayout>

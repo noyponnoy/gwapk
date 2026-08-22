@@ -1,0 +1,48 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:6:1-26:12
+INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:6:1-26:12
+	package
+		INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:6:11-69
+application
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:8:5-25:19
+service#org.amnezia.awg.backend.GoBackend$VpnService
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:9:9-24:19
+	android:label
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:12:13-50
+	android:exported
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:14:13-36
+	android:permission
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:13:13-69
+	android:foregroundServiceType
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:11:13-55
+	android:name
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:10:13-72
+intent-filter#action:name:android.net.VpnService
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:15:13-17:29
+action#android.net.VpnService
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:16:17-65
+	android:name
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:16:25-62
+meta-data#android.net.VpnService.SUPPORTS_ALWAYS_ON
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:18:13-20:40
+	android:value
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:20:17-37
+	android:name
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:19:17-73
+property#android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE
+ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:21:13-23:39
+	android:value
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:23:17-36
+	android:name
+		ADDED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:22:17-76
+uses-sdk
+INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml
+INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml

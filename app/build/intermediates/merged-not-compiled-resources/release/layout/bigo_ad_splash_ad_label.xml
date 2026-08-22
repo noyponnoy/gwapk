@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.bigo.ads.common.view.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:id="@+id/inter_layout_ad_tag"
+    android:layout_alignParentBottom="true"
+    app:bigo_ad_radius="1dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bigo_ad_ru_background"
+        android:padding="3dp">
+        <TextView
+            android:id="@+id/inter_splash_advertiser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="#ffffffff"
+            android:maxWidth="240dp"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/inter_splash_adtage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:text="Ad"
+            android:textColor="#ffffffff"
+            android:paddingRight="3dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:textSize="10dp"
+            tools:ignore="ContentDescription,HardcodedText,SpUsage" />
+    </LinearLayout>
+
+
+</sg.bigo.ads.common.view.RoundedFrameLayout>

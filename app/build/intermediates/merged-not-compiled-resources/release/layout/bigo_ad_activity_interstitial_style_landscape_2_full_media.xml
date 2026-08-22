@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.bigo.ads.api.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inter_native_ad_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:id="@+id/inter_media_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <sg.bigo.ads.common.view.RoundedFrameLayout
+                android:id="@+id/inter_landscape_media_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <sg.bigo.ads.api.MediaView
+                    android:id="@+id/inter_media"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </sg.bigo.ads.common.view.RoundedFrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/inter_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:shadowColor="@color/bigo_ad_black"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="#C7999999"
+            android:textSize="13sp"
+            tools:text="Warning Warning Warning" />
+
+        <View
+            android:id="@+id/inter_layout_mask"
+            android:layout_width="wrap_content"
+            android:layout_above="@id/inter_warning"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/inter_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/inter_ad_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <sg.bigo.ads.common.view.RoundedFrameLayout
+                android:id="@+id/inter_ad_info_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bigo_ad_interstitial_landscape_ad_info_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <sg.bigo.ads.common.view.RoundedFrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/inter_rounded_icon_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        app:bigo_ad_radius="8dp">
+
+                        <ImageView
+                            android:id="@+id/inter_icon"
+                            android:layout_width="44dp"
+                            android:layout_height="44dp"
+                            tools:ignore="ContentDescription" />
+                    </sg.bigo.ads.common.view.RoundedFrameLayout>
+
+                    <TextView
+                        android:id="@+id/inter_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:lines="1"
+                        android:text="@string/bigo_ad_title_default"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp" />
+                </LinearLayout>
+            </sg.bigo.ads.common.view.RoundedFrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignBottom="@id/inter_layout_mask">
+
+            <sg.bigo.ads.common.view.RoundedFrameLayout
+                android:id="@+id/inter_btn_cta_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:bigo_ad_radius="6dp">
+
+                <Button
+                    android:id="@+id/inter_btn_cta"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bigo_ad_button_bg_rectangle_blue"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/bigo_ad_cta_default"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </sg.bigo.ads.common.view.RoundedFrameLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/inter_btn_mute"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bigo_ad_ic_media_mute"
+            android:visibility="invisible" />
+
+        <sg.bigo.ads.api.AdOptionsView
+            android:id="@+id/inter_options"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="9.5dp"
+            android:layout_marginRight="9.5dp"
+            android:layout_marginBottom="9dp" />
+
+        <TextView
+            android:id="@+id/inter_advertiser"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bigo_ad_advertiser_background"
+            android:ellipsize="end"
+            android:maxWidth="240dp"
+            android:maxLines="1"
+            android:text="bigoad.com"
+            android:textColor="#E9EBEC"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="bigoad.com" />
+
+        <TextView
+            android:id="@+id/inter_ad_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10.5dp"
+            android:layout_marginLeft="10.5dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/bigo_ad_tag_background"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:text="@string/bigo_ad_tag"
+            android:textColor="#CCFFFFFF"
+            android:textSize="9sp"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+</sg.bigo.ads.api.NativeAdView>

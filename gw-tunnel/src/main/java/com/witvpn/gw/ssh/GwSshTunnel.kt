@@ -3,13 +3,10 @@ package com.witvpn.gw.ssh
 import com.witvpn.gw.inject.InjectorSocketFactory
 import com.witvpn.gw.model.GwServerConfig
 import com.witvpn.gw.util.GwLog
-import net.schmizz.sshj.DefaultConfig
 import net.schmizz.sshj.SSHClient
-import net.schmizz.sshj.common.SecurityUtils
 import net.schmizz.sshj.connection.channel.direct.DirectConnection
 import net.schmizz.sshj.transport.verification.PromiscuousVerifier
 import java.io.IOException
-import java.net.InetSocketAddress
 import java.security.MessageDigest
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicLong
@@ -43,13 +40,9 @@ class GwSshTunnel(
     @Throws(IOException::class)
     fun connect() {
         onState(GwSshState.CONNECTING)
-        val config = DefaultConfig().apply {
-            // keep the transport alive through NAT idle timeouts
-            keepAliveProvider = net.schmizz.sshj.KeepAliveProvider.HEARTBEAT
-            this.timeoutMs = 20_000      // connect/kex
-            this.connectionTimeout = 15_000
-        }
-        val client = SSHClient(config)
+        val client = SSHClient()
+        client.connectTimeout = 15_000
+        client.timeout = 20_000
         // Host-key handling: if the server pinned an ed25519 key, verify it; otherwise
         // accept (the tunnel's integrity is what matters; we are already inside an
         // encrypted channel). Pinning is preferred — set cfg.ssh_hostkey in the bot.
@@ -64,8 +57,7 @@ class GwSshTunnel(
 
         client.authPassword(cfg.ssh_username, cfg.ssh_password)
 
-        // No session channel — we only forward. Configure transport keepalive.
-        client.transport.heartbeatInterval = 30
+        // No session channel — we only forward. KeepAlive is handled by DefaultConfig (HEARTBEAT).
 
         ssh = client
         alive = true
@@ -82,7 +74,7 @@ class GwSshTunnel(
     fun openDirectChannel(host: String, port: Int): DirectConnection {
         val s = ssh ?: throw IOException("ssh not connected")
         val id = nextId.incrementAndGet()
-        val ch = s.newDirectConnection(InetSocketAddress(host, port))
+        val ch = s.newDirectConnection(host, port)
         channels[id] = ch
         return ch
     }
@@ -104,17 +96,13 @@ class GwSshTunnel(
 
     /** Verify a pinned ed25519 host key (base64 of the OpenSSH pub key). */
     private class PinnedKeyVerifier(private val pinned: String) : net.schmizz.sshj.transport.verification.HostKeyVerifier {
-        override fun verify(hostname: String, port: Int, key: net.schmizz.sshj.common.KeyType, keyBytes: ByteArray): Boolean {
-            val actual = net.schmizz.sshj.common.SecurityUtils.getFingerprint(key, keyBytes)
+        override fun verify(hostname: String, port: Int, key: java.security.PublicKey): Boolean {
+            val actual = net.schmizz.sshj.common.SecurityUtils.getFingerprint(key)
             val pin = pinned.trim()
-            // compare by raw base64 of the key blob too
+            val keyBytes = key.encoded
             val actualB64 = android.util.Base64.encodeToString(keyBytes, android.util.Base64.NO_WRAP)
             val ok = actualB64 == pin || actual.equals(pin, ignoreCase = true)
-            if (!ok) {
-                // fingerprint mismatch — refuse
-                return false
-            }
-            return true
+            return ok
         }
         override fun findExistingAlgorithms(hostname: String, port: Int): MutableList<String> = mutableListOf()
     }

@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/view_input.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/connect_limit_expired_dialog.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/connect_limit_expired_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/dialog_delete_account.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_delete_account.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_qr2.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_qr2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_mnemonic.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_mnemonic.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_qr.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_qr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_bottom_navigation_custom.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_bottom_navigation_custom.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_mnemonic2.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_mnemonic2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/item_location.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_location.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_split_tunnel.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_split_tunnel.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/activity_main.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_restore.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_restore.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/item_split_tunnel_app.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_split_tunnel_app.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_new_password.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_new_password.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_auth_toolbar.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/layout_auth_toolbar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_connect.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_connect.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_profile.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_splash.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_greys_billing.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_greys_billing.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_auth.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_left_drawer.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_left_drawer.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_tab.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_tab.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_servers.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_servers.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_policy.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_policy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_connect2.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_connect2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_servers2.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_servers2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_traffic.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_traffic.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/item_custom_snackbar.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_custom_snackbar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/item_selection.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_selection.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_support.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_support.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/dialog_protocol_info.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_protocol_info.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_settings.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_main_tab.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_main_tab.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/about_connect_limit_dialog.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/about_connect_limit_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_otp.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_otp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/view_input_code.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_code.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_confirm_otp.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_confirm_otp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_telegram_ad.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_telegram_ad.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/view_input_code_group.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_code_group.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/view_diamond_pro.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_diamond_pro.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/layout_loading.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_loading.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_forgot_password.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_forgot_password.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/view_input_new.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_new.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/dialog_welcome.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_welcome.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/new_user_dialog.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/new_user_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-mergeDebugResources-92:/layout/fragment_billing.xml",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_billing.xml"
+    }
+]

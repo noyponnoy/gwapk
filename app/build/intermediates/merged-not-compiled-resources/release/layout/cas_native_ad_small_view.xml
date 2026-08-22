@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="32dp"
+    android:layout_height="500dp"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:paddingHorizontal="5dp">
+
+    <ImageView
+        android:id="@+id/cas_native_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="4dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cas_native_headline"
+            style="@style/com.cleveradssolutions.nativeAds.AutoScrollingTextView.Title"
+            tools:text="Primary headline text" />
+
+        <include layout="@layout/cas_native_ad_info_line" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cas_native_body_divider"
+        style="@style/CleverAdsSolutionsDivider" />
+
+    <TextView
+        android:id="@+id/cas_native_body"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textSize="11sp"
+        tools:text="Secondary body text Secondary body text Secondary body text Secondary body text Secondary body text" />
+
+    <com.cleveradssolutions.sdk.nativead.CASMediaView
+        android:id="@+id/cas_native_media_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="2dp" />
+
+    <TextView
+        android:id="@+id/cas_native_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:singleLine="true"
+        android:layout_gravity="bottom"
+        android:textColor="#80000000"
+        android:textSize="10sp"
+        tools:text="FREE" />
+
+    <Button
+        android:id="@+id/cas_native_cta"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxWidth="140dp"
+        android:minWidth="80dp"
+        android:minHeight="32dp"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        tools:text="CTA" />
+
+    <com.cleveradssolutions.sdk.nativead.CASChoicesView
+        android:id="@+id/cas_native_ad_choices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

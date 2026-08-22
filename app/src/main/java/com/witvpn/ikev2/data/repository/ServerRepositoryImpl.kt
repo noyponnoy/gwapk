@@ -4,6 +4,9 @@ import com.witvpn.ikev2.data.remote.ApiService
 import com.witvpn.ikev2.data.remote.model.ServerObject
 import com.witvpn.ikev2.domain.model.Server
 import com.witvpn.ikev2.domain.repository.ServerRepository
+import com.witvpn.gw.crypto.GwCrypto
+import com.witvpn.gw.model.GwEnvelope
+import com.witvpn.gw.model.GwServerConfig
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,6 +24,12 @@ class ServerRepositoryImpl @Inject constructor(
         
     private val awgState = MutableStateFlow<List<com.witvpn.ikev2.domain.model.ServerAwg>>(listOf())
     override val awgStateFlow: StateFlow<List<com.witvpn.ikev2.domain.model.ServerAwg>> = awgState.asStateFlow()
+
+    private val gwState = MutableStateFlow<List<Server>>(listOf())
+    override val gwServersStateFlow: StateFlow<List<Server>> = gwState.asStateFlow()
+
+    private val gwConfigMap = MutableStateFlow<Map<String, GwServerConfig>>(emptyMap())
+    override val gwConfigMapFlow: StateFlow<Map<String, GwServerConfig>> = gwConfigMap.asStateFlow()
 
     override suspend fun getServersAwg(param: MutableMap<String, Any>) {
         try {
@@ -43,6 +52,52 @@ class ServerRepositoryImpl @Inject constructor(
             android.util.Log.e("AWGServerRepository", "getServersAwg EXCEPTION: ${e.message}", e)
         }
     }
+
+    override suspend fun getServersGw(param: MutableMap<String, Any>, privHex: String) {
+        try {
+            val response = api.getServersGw(param)
+            val configMap = mutableMapOf<String, GwServerConfig>()
+            val servers = response.data?.mapNotNull { row ->
+                val env = row.enc ?: return@mapNotNull null
+                val meta = row.meta
+                try {
+                    val cfg = GwCrypto.decryptConfig(
+                        privHex,
+                        GwEnvelope(
+                            eph = env.eph ?: "",
+                            ct = env.ct ?: "",
+                            iv = env.iv ?: ""
+                        )
+                    )
+                    val serverId = "gw_${cfg.ip_address}"
+                    configMap[serverId] = cfg
+                    Server(
+                        id = serverId,
+                        country = meta?.country ?: cfg.proxy_host,
+                        ipAddress = cfg.ip_address,
+                        premium = meta?.premium ?: false,
+                        recommend = meta?.priority?.let { it > 0 } ?: false,
+                        state = meta?.country ?: cfg.proxy_host,
+                        countryCode = meta?.countryCode,
+                        ca_file = null,
+                        ca_fileName = null,
+                        p_nsm = null,
+                        u_nsm = null,
+                        protocol = "gw",
+                        configAwg = null
+                    )
+                } catch (e: Exception) {
+                    android.util.Log.e("GWServerRepository", "Decrypt failed: ${e.message}", e)
+                    null
+                }
+            } ?: emptyList()
+            gwConfigMap.update { configMap }
+            gwState.update { servers }
+        } catch (e: Exception) {
+            android.util.Log.e("GWServerRepository", "getServersGw EXCEPTION: ${e.message}", e)
+        }
+    }
+
     private val _serversLoad = MutableStateFlow<Map<String, Int>>(emptyMap())
     override val serversLoadFlow: StateFlow<Map<String, Int>> = _serversLoad.asStateFlow()
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:scrollbars="horizontal">
+
+    <com.monetrix.adsdk.api.adview.AdOptionsView
+        android:id="@+id/inter_options"
+        android:layout_width="13dp"
+        android:layout_height="13dp" />
+
+    <com.monetrix.adsdk.base.view.RoundedFrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3.5dp"
+        app:monetrix_radius="7dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#33000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="1dp">
+
+            <TextView
+                android:id="@+id/inter_ad_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/monetrix_tag"
+                android:textColor="#ffffffff"
+                android:textSize="9sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:background="#4dffffff"/>
+
+            <TextView
+                android:id="@+id/inter_advertiser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="monetrix"
+                android:textColor="#ffffffff"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </com.monetrix.adsdk.base.view.RoundedFrameLayout>
+
+</LinearLayout>

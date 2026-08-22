@@ -1,0 +1,55 @@
+<script src = "mraid.js">
+</script>
+
+<script type='text/javascript'>
+   var ut_ju = 'https://ads.undertone.com/aj';
+   ut=new Object();
+   ut.zoneid=141264;
+</script>
+<script type="text/javascript" src="https://cdn.undertone.com/js/ajs.js"></script>
+
+<!--
+<script >
+    console.log(JSON.stringify(window.MRAID_ENV));
+
+    mraid.addEventListener('stateChange', function(state) {
+        console.log('state EVENT = '+state);
+    });
+
+    mraid.addEventListener('exposureChange', function(exposedPercentage, visibleRectangle) {
+        console.log('exposureChange EVENT: exposedPercentage = '+exposedPercentage+'; visibleRectangle:'+JSON.stringify(visibleRectangle));
+    });
+
+    console.log('Screen size = '+mraid.getScreenSize());
+    console.log('Max size = '+mraid.getMaxSize());
+
+    /*mraid.setOrientationProperties (
+        {
+            "allowOrientationChange":true,
+            "forceOrientation":"landscape"
+        }
+    );*/
+
+    var orProps = mraid.getOrientationProperties();
+    console.log(JSON.stringify(orProps));
+    console.log('Orientation props = '+mraid.getOrientationProperties());
+
+    function playAd() {
+        mraid.getCurrentAppOrientation();
+        mraid.open('http://google.com');
+    }
+
+    if (mraid.getState() === 'ready') {
+        playAd();
+    } else {
+        mraid.addEventListener('ready', function() {
+            console.log('ready EVENT');
+            playAd();
+        });
+    }
+
+    //Test supports
+    var feature = 'location';
+    console.log(feature +' feature is '+mraid.supports(feature));
+
+</script>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">365910992227-1oml5b0mo0hs2j82vbjuoc3esi9ocfik.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">365910992227</string>
+    <string name="google_api_key" translatable="false">AIzaSyDV8npE7W8TIDzgIXRHpPuUwn6zrnXErzg</string>
+    <string name="google_app_id" translatable="false">1:365910992227:android:2cd019273d3f7610765f56</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDV8npE7W8TIDzgIXRHpPuUwn6zrnXErzg</string>
+    <string name="google_storage_bucket" translatable="false">greywebs-android.appspot.com</string>
+    <string name="project_id" translatable="false">greywebs-android</string>
+</resources>

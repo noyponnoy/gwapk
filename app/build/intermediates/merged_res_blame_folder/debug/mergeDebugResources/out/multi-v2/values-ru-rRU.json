@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.witvpn.ikev2.app-mergeDebugResources-91:/values-ru-rRU/values-ru-rRU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\8.13\\transforms\\baf11130e9bb5557e8833bb9957aeb79\\transformed\\jetified-monetrix-ads-official-1.2.0.3\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,135,201",
+                        "endColumns": "79,65,48",
+                        "endOffsets": "130,196,245"
+                    },
+                    "to": {
+                        "startLines": "12,13,14",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "771,851,917",
+                        "endColumns": "79,65,48",
+                        "endOffsets": "846,912,961"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\8.13\\transforms\\51290ab0c0ce5a6bc08991e10aa163c4\\transformed\\jetified-bigo-ads-spec-5.10.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,134,199,273,342,418,493,573,650,723",
+                        "endColumns": "78,64,73,68,75,74,79,76,72,47",
+                        "endOffsets": "129,194,268,337,413,488,568,645,718,766"
+                    }
+                }
+            ]
+        }
+    ]
+}

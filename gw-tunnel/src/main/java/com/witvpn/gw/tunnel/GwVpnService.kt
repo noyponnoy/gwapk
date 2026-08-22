@@ -86,7 +86,7 @@ class GwVpnService : VpnService(), CoroutineScope {
             ACTION_STOP -> { stopGw(); return START_NOT_STICKY }
             ACTION_START -> {
                 val json = intent.getStringExtra(EXTRA_CONFIG) ?: run {
-                    log.e { "no config in start intent" }; stopSelf(); return START_NOT_STICKY
+                    log.e({ "no config in start intent" }); stopSelf(); return START_NOT_STICKY
                 }
                 val cfg = GwConfigCodec.decode(json) ?: run {
                     GwManager.publishError(GwError.GENERIC); stopSelf(); return START_NOT_STICKY
@@ -313,9 +313,9 @@ class GwVpnService : VpnService(), CoroutineScope {
                 NotificationChannel(CH_ID, "GW VPN", NotificationManager.IMPORTANCE_LOW)
             )
         }
-        // NOTE: replace android.R.drawable.stat_sys_vp with the app's real VPN icon.
+        // NOTE: replace android.R.drawable.ic_lock_lock with the app's real VPN icon.
         val n: Notification = NotificationCompat.Builder(this, CH_ID)
-            .setSmallIcon(android.R.drawable.stat_sys_vp)
+            .setSmallIcon(android.R.drawable.ic_lock_lock)
             .setContentTitle("GW VPN")
             .setContentText("Connected via GW")
             .setOngoing(true)

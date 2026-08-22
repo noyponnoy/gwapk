@@ -51,7 +51,7 @@ class InjectorSocketFactory(
         createSocket(host, port)
 
     override fun createSocket(host: InetAddress, port: Int): Socket =
-        connectAndInject(host.hostAddress, port)
+        connectAndInject(host.hostAddress ?: "127.0.0.1", port)
 
     override fun createSocket(address: InetAddress, port: Int, localAddress: InetAddress, localPort: Int): Socket =
         createSocket(address, port)
@@ -248,8 +248,8 @@ class InjectorSocketFactory(
     // Allow-all trust manager for the CDN/origin TLS hop. The security boundary is
     // the SSH host-key (optionally pinned via cfg.ssh_hostkey), not this TLS hop.
     private object TrustAll : X509TrustManager {
-        override fun checkClientTrained(chain: Array<out java.security.cert.X509Certificate>?, authType: String?) {}
-        override fun checkServerTrusted(chain: Array<out java.security.cert.X509Certificate>?, authType: String?) {}
-        override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate> = emptyArray()
+        override fun checkClientTrusted(chain: Array<out java.security.cert.X509Certificate>, authType: String) {}
+        override fun checkServerTrusted(chain: Array<out java.security.cert.X509Certificate>, authType: String) {}
+        override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate?> = emptyArray()
     }
 }

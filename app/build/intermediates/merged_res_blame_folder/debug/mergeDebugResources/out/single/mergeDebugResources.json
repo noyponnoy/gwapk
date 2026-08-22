@@ -1,0 +1,2214 @@
+[
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_circle_tg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_circle_tg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ug.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ug.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bi.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bi.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_rect_star.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_rect_star.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ni.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ni.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_custom_cursor.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/custom_cursor.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_notification_connecting.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_notification_connecting.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_cas_settings16n.json.flat",
+        "source": "com.witvpn.ikev2.app-res-87:/raw/cas_settings16n.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_otp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_otp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_restore.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_restore.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_logo_title.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_logo_title.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_vpn_state_fragment.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/vpn_state_fragment.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_illustration13.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/illustration13.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sindh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sindh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_stat_name.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_semi_bold.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_semi_bold.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_copy_all_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_copy_all_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_extra_light_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_extra_light_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_view_unfocused.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_view_unfocused.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_th.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_th.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_light.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_light.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_radio_checked.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/radio_checked.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_it.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_it.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_my.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_my.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_black_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_black_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_billing.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_billing.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_book.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_book.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_action_button_2.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_action_button_2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_6.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_6.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cf.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cf.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_loading.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_loading.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_custom_snackbar.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_custom_snackbar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_notification_connecting.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_notification_connecting.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_location.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_location.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sx.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sx.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_top_logo_old.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/top_logo_old.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nav_home.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_nav_home.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_notification_warning.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_notification_warning.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_crowd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_crowd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_extra_bold_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_extra_bold_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_flag_usa.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_flag_usa.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_confirm_otp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_confirm_otp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ie.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ie.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_div_height_10.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/div_height_10.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pt_20.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pt_20.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_nz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fj.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fj.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_4.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_4.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_ic_stat_name.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xxhdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_united_nations.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_united_nations.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tj.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tj.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_main.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/main.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_es.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_es.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ke.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ke.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_hd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_hd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_main.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/main.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_profile_list_context.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/profile_list_context.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_two_line_button.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/two_line_button.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sv.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sv.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_qr_code_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_qr_code_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_bg_globe_points.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/bg_globe_points.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pa.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pa.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_img_diamond.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/img_diamond.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_open_eye.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_open_eye.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lb.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lb.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_logo_splash.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_logo_splash.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_remediation_instruction.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/remediation_instruction.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_aw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/aw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_uk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_uk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_close_white_24dp.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_close_white_24dp.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_bg_welcome.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/bg_welcome.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_rectangle_r16.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_rectangle_r16.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_vu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_vu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_remediation_instruction_background_large.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/remediation_instruction_background_large.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_jm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_jm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_chevrone_down.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_chevrone_down.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_nr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_negative_dialog.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_negative_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ng.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ng.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_de.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_de.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_switch_thumb_split.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/switch_thumb_split.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ls.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ls.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_premium_card_unselected.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_premium_card_unselected.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_custom_snackbar.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_custom_snackbar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_logout_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_logout_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_stat_name.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_logout.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_view_focused.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_view_focused.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_premium_banner.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_premium_banner.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_split_tunnel.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_split_tunnel.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_rect_c32.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_rect_c32.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ch.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ch.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_profile_list_fragment.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/profile_list_fragment.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_snackbar_done.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_snackbar_done.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_profile_import_view.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/profile_import_view.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gi.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gi.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_premium_connected.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/premium_connected.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_button_active.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_button_active.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_eh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_eh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_certificates.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/certificates.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_help_outline_32.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_help_outline_32.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_arrowright.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_arrowright.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ru.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ru.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bb.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bb.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_bold_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_bold_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_login_dialog.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/login_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_view_input_new.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_new.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ms.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ms.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_as.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/as.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_transnistria.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_transnistria.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cancel.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_cancel.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ad.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ad.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_me.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_me.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_dz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_dz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_se.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_se.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_dialog_delete_account.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_delete_account.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_support.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_support.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_to.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_to.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_na.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_na.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_stat_name.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_at.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/at.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_td.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_td.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_main_tab.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_main_tab.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_hn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_hn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_question.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_question.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gb.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gb.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_logo_enter.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/logo_enter.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_item_selection_checked.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_item_selection_checked.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_nav_bottom.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_nav_bottom.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_notification_warning.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_notification_warning.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ky.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ky.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_globe.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_globe.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_dm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_dm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_banner_profile.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_banner_profile.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_notification.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_notification.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_chevron_right.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_chevron_right.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_arrow_left.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_arrow_left.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ba.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ba.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_au.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/au.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_selection.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_selection.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_remediation_instructions.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/remediation_instructions.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_traffic.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_traffic.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ca.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ca.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_code.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/bg_input_code.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_traffic.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_traffic.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_view.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_view.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_yiddish.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_yiddish.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_eg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_eg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mq.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mq.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_thin_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_thin_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ar.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_br.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_br.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_error_background.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/error_background.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_forgot_password.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_forgot_password.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_1.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_1.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_log.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/log.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_menu_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_menu_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_va.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_va.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_welcome.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_welcome.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_iq.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_iq.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_copy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_copy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_zm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_zm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_success_toast.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_success_toast.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fi.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fi.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_top_logo_old.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/top_logo_old.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_af.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_af.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ag.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ag.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_so.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_so.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bs.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bs.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_logo_update.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_logo_update.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_profile_import.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/profile_import.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_er.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_er.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_do.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_do.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_profile_list_item.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/profile_list_item.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_hysteria_logo.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_hysteria_logo.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_km.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_km.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_bottom_nav.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/menu/bottom_nav.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_profile_list.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/profile_list.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ga.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ga.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_nu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ee.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ee.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_telegram_32.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_telegram_32.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_notification_disconnected.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_notification_disconnected.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_globe.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_globe.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_view_error.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_view_error.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_semi_bold_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_semi_bold_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sb.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sb.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_arrowleft.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_arrowleft.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_rw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_rw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_done.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_done.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_free_connected.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/free_connected.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ck.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ck.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_new_password.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_new_password.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_action_button_disable.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_action_button_disable.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_somaliland.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_somaliland.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_za.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_za.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_3.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_3.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_connect2.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_connect2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_view_input_code.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_code.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_premium_card_selected.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_premium_card_selected.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_play.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/play.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_book_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_book_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cv.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cv.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_2.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_2.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_radio_unchecked.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/radio_unchecked.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_spy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_spy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pe.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pe.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_top_logo_old.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-hdpi/top_logo_old.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_notification_disconnected.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_notification_disconnected.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_om.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_om.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/menu_profile_edit.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/menu/profile_edit.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tibet.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tibet.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_illustration11.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/illustration11.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_black.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_black.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ir.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ir.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_medium_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_medium_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_notification_warning.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_notification_warning.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_notification_disconnect.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_notification_disconnect.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_notification_connecting.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_notification_connecting.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ae.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ae.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_notification_disconnected.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_notification_disconnected.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_mnemonic.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_mnemonic.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_bold.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_bold.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_stat_name.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_stat_name.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_view_input_code_group.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input_code_group.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_auth_toolbar.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/layout_auth_toolbar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_log_list_item.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/log_list_item.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_free_disconnected.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/free_disconnected.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_dialog_protocol_info.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_protocol_info.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_az.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/az.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_feature_5.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_feature_5.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_close_circle.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_close_circle.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_tab.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_tab.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ve.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ve.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_ic_vless.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/ic_vless.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_img_globe.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/img_globe.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_zw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_zw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/color_checkable_text_color.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/color/checkable_text_color.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_check_green.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_check_green.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_notification_disconnect.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_notification_disconnect.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_activated_background.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/activated_background.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_bg_globe_points.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xhdpi/bg_globe_points.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nav_premium.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_nav_premium.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tv.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tv.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pf.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pf.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_qr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_qr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nav_profile.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_nav_profile.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_policy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_policy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bj.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bj.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ai.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ai.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_vg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_vg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_is.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_is.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_button_inactive.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_button_inactive.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_je.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_je.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ax.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ax.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_us.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_us.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_qa.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_qa.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_activity_main.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_action_button_state.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_action_button_state.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_dialog_welcome.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/dialog_welcome.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_globe_points.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_globe_points.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ro.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ro.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_view_diamond_pro.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_diamond_pro.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_rectangle_r24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_rectangle_r24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_stadium.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_stadium.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_bg_welcome.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-hdpi/bg_welcome.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_vpn_server.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_vpn_server.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-nodpi_globus.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-nodpi/globus.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_split_tunnel_app.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/item_split_tunnel_app.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_globe_blur.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_globe_blur.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_content_paste_go_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_content_paste_go_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_code_selected_gradient.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_code_selected_gradient.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ws.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ws.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nf.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_nf.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_servers.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_servers.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mv.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mv.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sa.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sa.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ph.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ph.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_split_tunnel.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_split_tunnel.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cx.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cx.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_baseline_qr_code_32.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/baseline_qr_code_32.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_nl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_nl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_home_gear.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_home_gear.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/xml_settings.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/xml/settings.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/anim_anim_bottom_down.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/anim/anim_bottom_down.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_logo_grey.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/logo_grey.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ly.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ly.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_selected_application_item.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/selected_application_item.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_chevrone_up.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_chevrone_up.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_ic_stat_name.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xxxhdpi/ic_stat_name.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_hk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_hk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_vn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_vn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_medium.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_medium.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_speed.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_speed.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ci.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ci.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mo.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mo.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_img_globe_blur.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/img_globe_blur.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_logo.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/logo.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_ic_logo_connect.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/ic_logo_connect.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_rs.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_rs.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_vc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_vc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_fade_to_black.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_fade_to_black.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_item_selection.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_item_selection.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_action_button.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_action_button.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxxhdpi_logo.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxxhdpi/logo.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_left_drawer.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_left_drawer.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/xml_network_security_config.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/xml/network_security_config.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_unlock.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_unlock.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_servers2.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_servers2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_la.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_la.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_id.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_id.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_hr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_hr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_rectangle_c12.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_rectangle_c12.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_northern_cyprus.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_northern_cyprus.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_vi.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_vi.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_ic_logo_connected.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/ic_logo_connected.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_py.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_py.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_shape_circle.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/shape_circle.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_ic_ikev2.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/ic_ikev2.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_top_logo.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/top_logo.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ps.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ps.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_premium_shield.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_premium_shield.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_ic_close_white_24dp.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-mdpi/ic_close_white_24dp.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ec.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ec.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_et.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_et.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/anim_blink.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/anim/blink.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_support.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_support.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_io.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_io.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_np.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_np.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_illustration12.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/ic_illustration12.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_md.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_md.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bo.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bo.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_illustration13.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/illustration13.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_bg_globe_points.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/bg_globe_points.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_qr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_qr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_profile_detail_view.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/profile_detail_view.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_new_user_dialog.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/new_user_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_im.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_im.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ye.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ye.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_us_hi.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_us_hi.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_notification.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_notification.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_screw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_screw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_south_ossetia.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_south_ossetia.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_log_fragment.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/log_fragment.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_search_glass.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_search_glass.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_dk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_dk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kh.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kh.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_warning.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cross.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_cross.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_bottom_navigation_custom.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_bottom_navigation_custom.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gq.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gq.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_in.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_in.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_power_circle.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_power_circle.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_billing_tariff_gradient.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_billing_tariff_gradient.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_no.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_no.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_check_state.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_check_state.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lv.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lv.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_light_italic.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_light_italic.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ua.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ua.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_cz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_cz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ss.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ss.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_greys_billing.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_greys_billing.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ki.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ki.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-mdpi_top_logo_old.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-mdpi/top_logo_old.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_dialog_background.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/dialog_background.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_file_lock.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_file_lock.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_remediation_instruction_item.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/remediation_instruction_item.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_trusted_certificates_activity.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/trusted_certificates_activity.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_close_eye.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_close_eye.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_splash.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_splash.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/anim_anim_bottom_up.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/anim/anim_bottom_up.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_divider_horizontal_5dp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/divider_horizontal_5dp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_mnemonic2.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_mnemonic2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_co.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_co.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_play_bold.ttf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/play_bold.ttf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ge.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ge.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_qr2.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_qr2.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_connect.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_connect.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/color_checked_bottom.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/color/checked_bottom.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_indicator_live_green.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/indicator_live_green.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_sr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_sr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_item_selection_unchecked.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_item_selection_unchecked.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_banner_premium.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_banner_premium.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lt.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_lt.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/xml_remote_config_defaults.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/xml/remote_config_defaults.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_trash.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_trash.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_dj.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_dj.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bd.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bd.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_code_selected.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_code_selected.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_log_activity.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/log_activity.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_baseline_radio_button_unchecked_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_baseline_radio_button_unchecked_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_line_vertical.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/line_vertical.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ao.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ao.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_auth.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/fragment_auth.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_ic_loading.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/ic_loading.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mc.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mc.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_profile.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_premium_disconnected.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/premium_disconnected.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_layout_telegram_ad.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/layout_telegram_ad.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/raw_ic_logo_splash.json.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/raw/ic_logo_splash.json"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_gg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_gg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_lock.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_lock.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_power.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_power.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_switch_track_split.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/switch_track_split.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_imc_state_fragment.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/imc_state_fragment.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_vpn_profile_select.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/vpn_profile_select.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_xk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_xk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ne.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ne.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_img_heart_break.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/img_heart_break.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_be.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/be.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tl.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tl.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_pw.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_pw.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_si.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_si.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ht.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ht.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_extra_light.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_extra_light.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xhdpi_ic_close_white_24dp.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-xhdpi/ic_close_white_24dp.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_ma.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_ma.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_li.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_li.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_about_connect_limit_dialog.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/about_connect_limit_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_jp.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_jp.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_baseline_check_circle_outline_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_baseline_check_circle_outline_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bf.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/bf.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_code_unfocused.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_code_unfocused.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_extra_bold.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_extra_bold.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_uy.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_uy.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_delete.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_delete.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_bm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_bm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_am.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/am.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mm.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mm.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_play_regular.ttf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/play_regular.ttf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_fo.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_fo.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_notification_disconnect.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_notification_disconnect.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kg.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kg.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/font_campton_thin.otf.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/font/campton_thin.otf"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_hu.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_hu.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_input_code_activated.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_input_code_activated.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_premium_badge.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_premium_badge.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_kr.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_kr.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_illustration11.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/illustration11.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_mx.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_mx.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_uz.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_uz.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_premium_buy_btn.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_premium_buy_btn.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_eye_state.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_eye_state.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_st.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_st.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_view_input.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/view_input.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_tk.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_tk.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_block_profile.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_block_profile.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_by.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_by.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_close.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-hdpi_ic_notification.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable-hdpi/ic_notification.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_ic_awg.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/ic_awg.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_baseline_account_circle_24.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_baseline_account_circle_24.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_noconnection.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/ic_noconnection.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_il.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_il.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_ic_jo.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/lags/drawable/ic_jo.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_state_background.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/drawable/state_background.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_trusted_certificates_item.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/trusted_certificates_item.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable-xxhdpi_bg_welcome.png.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable-xxhdpi/bg_welcome.png"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_dialog_rounded.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_dialog_rounded.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_connect_limit_expired_dialog.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/connect_limit_expired_dialog.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_item_padding.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout/item_padding.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout_fragment_settings.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/drawable_bg_snack_bar.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/drawable/bg_snack_bar.xml"
+    },
+    {
+        "merged": "com.witvpn.ikev2.app-debug-93:/layout-large_remediation_instructions.xml.flat",
+        "source": "com.witvpn.ikev2.app-main-95:/KEV2/layout-large/remediation_instructions.xml"
+    }
+]

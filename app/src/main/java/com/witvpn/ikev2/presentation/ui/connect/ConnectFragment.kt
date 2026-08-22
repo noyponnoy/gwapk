@@ -68,14 +68,24 @@ import io.github.vyomtunnel.sdk.VyomState
 import com.witvpn.ikev2.awg.AmneziaWGManager
 import org.amnezia.awg.backend.Tunnel
 
+import com.witvpn.gw.tunnel.GwVpn
+import com.witvpn.gw.tunnel.GwManager
+import com.witvpn.gw.tunnel.GwState
+import com.witvpn.gw.model.GwServerConfig
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.collectLatest
+
 @AndroidEntryPoint
 class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_connect2)
 {
     private var isVlessMode = false
     private var isAwgMode = false
+    private var isGwMode = false
     private var isVlessConnected = false
     private var isDisconnectingVless = false
     private var pendingAwgServer: com.witvpn.ikev2.domain.model.ServerAwg? = null
+    private var pendingGwConfig: GwServerConfig? = null
 
     class PowerWhitelistRequired : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -168,6 +178,20 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         }
     }
 
+    private val gwVpnPrepareLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            pendingGwConfig?.let { cfg ->
+                GwVpn.start(requireContext(), cfg)
+            }
+            pendingGwConfig = null
+        } else {
+            pendingGwConfig = null
+            context?.let { Toast.makeText(it, "VPN permission denied", Toast.LENGTH_SHORT).show() }
+            updateVlessState(false)
+            showProgress(false)
+        }
+    }
+
     private val awgListener = object : AmneziaWGManager.StateListener {
         override fun onStateChange(state: Tunnel.State) {
             activity?.runOnUiThread {
@@ -175,7 +199,7 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                 when (state) {
                     Tunnel.State.UP -> {
                         showProgress(false)
-                        updateVlessState(true) // Re-using state UI for simplicity
+                        updateVlessState(true)
                     }
                     Tunnel.State.DOWN -> {
                         showProgress(false)
@@ -189,6 +213,28 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         override fun onTrafficUpdate(rx: Long, tx: Long) {
             activity?.runOnUiThread {
                 if (!isAdded) return@runOnUiThread
+                binding.tvUpload.text = formatTraffic(tx)
+                binding.tvDownload.text = formatTraffic(rx)
+            }
+        }
+    }
+
+    private val gwStateJob = lifecycleScope.launch {
+        GwManager.state.collectLatest { s ->
+            if (!isAdded) return@collectLatest
+            activity?.runOnUiThread {
+                when (s) {
+                    GwState.CONNECTED -> { showProgress(false); updateVlessState(true) }
+                    GwState.CONNECTING -> { showProgress(true) }
+                    GwState.DISCONNECTING, GwState.DISABLED -> { showProgress(false); updateVlessState(false) }
+                }
+            }
+        }
+    }
+    private val gwTrafficJob = lifecycleScope.launch {
+        GwManager.traffic.collectLatest { (rx, tx) ->
+            if (!isAdded) return@collectLatest
+            activity?.runOnUiThread {
                 binding.tvUpload.text = formatTraffic(tx)
                 binding.tvDownload.text = formatTraffic(rx)
             }
@@ -292,20 +338,26 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         // Fix for state loss: Check Vyom state and update UI
         val vyomState = VyomVpnManager.currentState
         if (vyomState == VyomState.CONNECTED && !isDisconnectingVless) {
-            if (!isVlessMode && !isAwgMode) {
+            if (!isVlessMode && !isAwgMode && !isGwMode) {
                 setProtocol("VLESS")
             }
             isVlessConnected = true
             updateVlessState(true)
             showProgress(false)
         } else if (vyomState == VyomState.CONNECTING && !isDisconnectingVless) {
-            if (!isVlessMode && !isAwgMode) {
+            if (!isVlessMode && !isAwgMode && !isGwMode) {
                 setProtocol("VLESS")
             }
             showProgress(true)
         } else if (AmneziaWGManager.isConnected()) {
             if (!isAwgMode) {
                 setProtocol("AWG")
+            }
+            updateVlessState(true)
+            showProgress(false)
+        } else if (GwManager.isConnected) {
+            if (!isGwMode) {
+                setProtocol("GW")
             }
             updateVlessState(true)
             showProgress(false)
@@ -325,6 +377,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     override fun onDestroyView() {
         super.onDestroyView()
         handler.removeCallbacksAndMessages(null)
+        gwStateJob.cancel()
+        gwTrafficJob.cancel()
     }
 
     private val shareViewModel: ShareViewModel by activityViewModels()
@@ -418,6 +472,29 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                         }
                     } else {
                         Toast.makeText(context, "AWG Server not found for this location", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            } else if (isGwMode) {
+                if (GwManager.isConnected) {
+                    GwVpn.stop(requireContext())
+                    updateVlessState(false)
+                    val userId = shareViewModel.userLiveData.value?.id ?: ""
+                    if (userId.isNotEmpty()) {
+                        val ctx = context ?: return@setOnClickListener
+                        ConnectionTracker.reportDisconnect(ctx, userId)
+                    }
+                } else {
+                    val gwServer = resolveGwServerForConnection()
+                    if (gwServer != null) {
+                        if (shareViewModel.isPremium) {
+                            startGwVpnWithPermissionCheck(gwServer)
+                        } else {
+                            CasAds.showConnectAd(requireActivity()) {
+                                startGwVpnWithPermissionCheck(gwServer)
+                            }
+                        }
+                    } else {
+                        Toast.makeText(context, "GW Server not found for this location", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else if (it.isEnabled) {
@@ -639,13 +716,21 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                 }
             }
         }
+        viewModel2.serversGwList.observe(viewLifecycleOwner) { gwServers ->
+            if (isGwMode && gwServers.isNotEmpty()) {
+                val first = gwServers.first()
+                binding.connectionTitle.text = first.ipAddress ?: first.country
+            }
+        }
         shareViewModel.serverLiveData.observe(viewLifecycleOwner) { (status, savedServer, _) ->
             if (status == Status.SUCCESS) {
                 val servers = viewModel2.serversList.value
                 val awgServers = viewModel2.serversAwgList.value?.map { com.witvpn.ikev2.domain.model.Server.fromAwg(it) }
+                val gwServers = viewModel2.serversGwList.value
                 val allServers = mutableListOf<com.witvpn.ikev2.domain.model.Server>()
                 servers?.let { allServers.addAll(it) }
                 awgServers?.let { allServers.addAll(it) }
+                gwServers?.let { allServers.addAll(it) }
 
                 Log.d("ConnectFragment", "initObserve 1 ${savedServer?.country} servers ${allServers.map { it.country }}")
                 val shouldClearSavedServer = savedServer?.let { server ->
@@ -654,6 +739,10 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                         server.protocol.equals("awg", ignoreCase = true) -> {
                             val awgServerList = viewModel2.serversAwgList.value ?: emptyList()
                             awgServerList.isNotEmpty() && awgServerList.none { it.ipAddress == server.ipAddress }
+                        }
+                        server.protocol.equals("gw", ignoreCase = true) -> {
+                            val gwServerList = viewModel2.serversGwList.value ?: emptyList()
+                            gwServerList.isNotEmpty() && gwServerList.none { it.ipAddress == server.ipAddress }
                         }
                         else -> {
                             val ikev2ServerList = viewModel2.serversList.value ?: emptyList()
@@ -672,6 +761,8 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
                 } else if (savedServer != null) {
                     if (savedServer.protocol.equals("awg", ignoreCase = true) && !isAwgMode) {
                         setProtocol("AWG")
+                    } else if (savedServer.protocol.equals("gw", ignoreCase = true) && !isGwMode) {
+                        setProtocol("GW")
                     }
 
                     // Check if we need to auto-reconnect IKEv2 to new server
@@ -705,10 +796,11 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
 
         viewModel.stateLiveData.observe(viewLifecycleOwner) { state ->
             Timber.d("State " + state?.name)
-            // Skip IKEv2 state updates when VLESS is connected to avoid resetting VLESS UI
+            // Skip IKEv2 state updates when VLESS/GW is connected to avoid resetting UI
             if (isVlessConnected ||
                 (isVlessMode && VyomVpnManager.currentState == VyomState.CONNECTED) ||
-                isAwgMode) {
+                isAwgMode ||
+                isGwMode) {
                 return@observe
             }
             when (state) {
@@ -795,7 +887,11 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     private fun openServerList() {
         try {
             val bundle = android.os.Bundle().apply {
-                putString("PROTOCOL", if (isAwgMode) "AWG" else "IKEv2")
+                putString("PROTOCOL", when {
+                    isAwgMode -> "AWG"
+                    isGwMode -> "GW"
+                    else -> "IKEv2"
+                })
             }
             findNavController().navigate(R.id.serversFragment, bundle)
         } catch (e: Exception) {
@@ -879,6 +975,7 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
     private fun setProtocol(protocol: String) {
         isVlessMode = protocol == "VLESS"
         isAwgMode = protocol == "AWG"
+        isGwMode = protocol == "GW"
         putStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, protocol)
         
         if (protocol == "VLESS") {
@@ -957,10 +1054,14 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
             return "AWG"
         }
 
-        val savedProtocol = getStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, "IKEv2") ?: "IKEv2"
+        if (GwManager.isConnected) {
+            return "GW"
+        }
+
+        val savedProtocol = getStringPref(SharePrefs.KEY_SELECTED_PROTOCOL, "GW") ?: "GW"
         return when (savedProtocol) {
-            "AWG", "VLESS", "IKEv2" -> savedProtocol
-            else -> "IKEv2"
+            "AWG", "VLESS", "IKEv2", "GW" -> savedProtocol
+            else -> "GW"
         }
     }
 
@@ -1084,6 +1185,46 @@ class ConnectFragment: BaseFragment<FragmentConnect2Binding>(R.layout.fragment_c
         val userId = shareViewModel.userLiveData.value?.id ?: ""
         if (userId.isNotEmpty()) {
             ConnectionTracker.reportConnect(ctx, userId, serverAwg.ipAddress, "awg")
+        }
+    }
+
+    private fun resolveGwServerForConnection(): GwServerConfig? {
+        val gwServers = viewModel2.serversGwList.value ?: return null
+        val configMap = viewModel2.serversGwConfigMap.value ?: emptyMap()
+        val selected = shareViewModel.serverLiveData.value?.data
+        return if (selected != null && selected.protocol == "gw") {
+            configMap[selected.id]
+        } else {
+            val first = gwServers.firstOrNull()
+            first?.let { configMap[it.id] }
+        }
+    }
+
+    private fun startGwVpnWithPermissionCheck(cfg: GwServerConfig) {
+        if (!isAdded) return
+        val ctx = context ?: return
+
+        pendingGwConfig = cfg
+        showProgress(true)
+        binding.tvState.text = getString(R.string.connecting, "...")
+
+        val intent = VpnService.prepare(ctx)
+        if (intent != null) {
+            try {
+                gwVpnPrepareLauncher.launch(intent)
+            } catch (e: Exception) {
+                Log.e("ConnectFragment", "GW VPN permission request failed", e)
+                Toast.makeText(ctx, "Could not request VPN permission", Toast.LENGTH_SHORT).show()
+                updateVlessState(false)
+                showProgress(false)
+            }
+            return
+        }
+
+        GwVpn.start(ctx, cfg)
+        val userId = shareViewModel.userLiveData.value?.id ?: ""
+        if (userId.isNotEmpty()) {
+            ConnectionTracker.reportConnect(ctx, userId, cfg.ip_address, "gw")
         }
     }
 

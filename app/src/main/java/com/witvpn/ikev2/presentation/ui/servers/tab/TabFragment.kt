@@ -65,6 +65,10 @@ class TabFragment() : BaseFragment<FragmentTabBinding>(R.layout.fragment_tab) {
             updateList()
         }
 
+        viewModel.serversGwList.observe(viewLifecycleOwner) { _ ->
+            updateList()
+        }
+
         viewModel.serversLoadMap.observe(viewLifecycleOwner) { _ ->
             updateList()
         }
@@ -79,6 +83,9 @@ class TabFragment() : BaseFragment<FragmentTabBinding>(R.layout.fragment_tab) {
         } else if (protocolFilter == "AWG") {
             val awgServers = viewModel.serversAwgList.value?.map { com.witvpn.ikev2.domain.model.Server.fromAwg(it) }?.filter { it.premium == premium } ?: emptyList()
             combined.addAll(awgServers)
+        } else if (protocolFilter == "GW") {
+            val gwServers = viewModel.serversGwList.value?.filter { it.premium == premium } ?: emptyList()
+            combined.addAll(gwServers)
         }
 
         tabAdapter.updateData(

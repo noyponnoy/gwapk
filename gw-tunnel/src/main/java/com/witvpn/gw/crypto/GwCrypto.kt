@@ -89,7 +89,7 @@ object GwCrypto {
         val b = v.toByteArray()
         return when {
             b.size == 32 -> b
-            b.size == 33 && b[0] == 0 -> b.copyOfRange(1, 33) // strip sign byte
+            b.size == 33 && b[0].toInt() == 0 -> b.copyOfRange(1, 33) // strip sign byte
             b.size < 32 -> ByteArray(32 - b.size) + b          // left-pad
             else -> b.copyOfRange(b.size - 32, b.size)
         }

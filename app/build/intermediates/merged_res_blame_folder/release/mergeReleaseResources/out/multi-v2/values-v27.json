@@ -1,0 +1,39 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.witvpn.ikev2.app-mergeReleaseResources-91:/values-v27/values-v27.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\8.13\\transforms\\b5ac8584f2f57f41238b6d5972744a5f\\transformed\\jetified-mbridge_android_sdk-17.1.61\\res\\values-v27\\values-v27.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,158",
+                        "endLines": "2,4",
+                        "endColumns": "102,12",
+                        "endOffsets": "153,266"
+                    },
+                    "to": {
+                        "startLines": "11,12",
+                        "startColumns": "4,4",
+                        "startOffsets": "559,662",
+                        "endLines": "11,13",
+                        "endColumns": "102,12",
+                        "endOffsets": "657,770"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\8.13\\transforms\\bd7836b43fef89c7aed2b62bce623709\\transformed\\jetified-ysonetwork-1.3.7\\res\\values-v27\\values-v27.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "554"
+                    }
+                }
+            ]
+        }
+    ]
+}

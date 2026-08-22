@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource,ContentDescription">
+
+    <FrameLayout
+        android:id="@+id/layout_contain_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <sg.bigo.ads.api.MediaView
+            android:id="@+id/bigo_ad_splash_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <FrameLayout
+            android:id="@+id/inter_fl_interaction_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:clipChildren="false"
+            android:background="@drawable/bigo_ad_interaction_animation_bg"
+            android:paddingBottom="44dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <include layout="@layout/bigo_ad_splash_ad_label" />
+
+            <TextView
+                android:id="@+id/inter_warning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#D8D8D8"
+                android:textSize="13sp"
+                tools:text="Warning Warning Warning" />
+
+            <sg.bigo.ads.api.AdOptionsView
+                android:id="@+id/bigo_ad_splash_options"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginBottom="9dp"
+                android:layout_gravity="end|bottom"
+                tools:background="@color/bigo_ad_black"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

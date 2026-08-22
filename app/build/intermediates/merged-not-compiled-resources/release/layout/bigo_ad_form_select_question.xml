@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RadioGroup
+        android:id="@+id/inter_form_edit_content"
+        android:background="@drawable/bigo_ad_edit_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="20.5dp"
+        android:paddingBottom="11dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical">
+    </RadioGroup>
+    <TextView
+        android:id="@+id/inter_form_edit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:textSize="13sp"
+        android:textColor="#262E33"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:layout_alignTop="@id/inter_form_edit_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-7dp"/>
+
+    <TextView
+        android:id="@+id/inter_form_edit_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#FF4D6A"
+        android:layout_below="@id/inter_form_edit_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "365910992227",
+    "project_id": "greywebs-android",
+    "storage_bucket": "greywebs-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365910992227:android:2cd019273d3f7610765f56",
+        "android_client_info": {
+          "package_name": "app.greywebs.vpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365910992227-1oml5b0mo0hs2j82vbjuoc3esi9ocfik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV8npE7W8TIDzgIXRHpPuUwn6zrnXErzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365910992227-1oml5b0mo0hs2j82vbjuoc3esi9ocfik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

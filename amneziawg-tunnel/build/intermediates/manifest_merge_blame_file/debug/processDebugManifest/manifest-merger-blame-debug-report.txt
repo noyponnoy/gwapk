@@ -1,0 +1,48 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  ~ Copyright © 2017-2023 WireGuard LLC. All Rights Reserved.
+4  ~ SPDX-License-Identifier: Apache-2.0
+5-->
+6<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+7    package="org.amnezia.awg.tunnel" >
+8
+9    <uses-sdk android:minSdkVersion="24" />
+10
+11    <application>
+11-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:8:5-25:19
+12        <service
+12-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:9:9-24:19
+13            android:name="org.amnezia.awg.backend.GoBackend$VpnService"
+13-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:10:13-72
+14            android:exported="true"
+14-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:14:13-36
+15            android:foregroundServiceType="specialUse"
+15-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:11:13-55
+16            android:label="AmneziaWG VPN Service"
+16-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:12:13-50
+17            android:permission="android.permission.BIND_VPN_SERVICE" >
+17-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:13:13-69
+18            <intent-filter>
+18-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:15:13-17:29
+19                <action android:name="android.net.VpnService" />
+19-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:16:17-65
+19-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:16:25-62
+20            </intent-filter>
+21
+22            <meta-data
+22-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:18:13-20:40
+23                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+23-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:19:17-73
+24                android:value="true" />
+24-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:20:17-37
+25
+26            <property
+26-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:21:13-23:39
+27                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+27-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:22:17-76
+28                android:value="vpn" />
+28-->C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel\src\main\AndroidManifest.xml:23:17-36
+29        </service>
+30    </application>
+31
+32</manifest>

@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.witvpn.ikev2.app-mergeReleaseResources-91:/values-v35/values-v35.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\8.13\\transforms\\e58113e1afb921c30c11317882a32516\\transformed\\jetified-cas-sdk-4.8.0-beta1\\res\\values-v35\\values-v35.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "242"
+                    }
+                }
+            ]
+        }
+    ]
+}

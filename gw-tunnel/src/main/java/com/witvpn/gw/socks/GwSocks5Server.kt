@@ -72,7 +72,7 @@ class GwSocks5Server(
         log.i { "SOCKS5 stopped" }
     }
 
-    private fun handle(client: Socket) {
+    private suspend fun handle(client: Socket) {
         client.tcpNoDelay = true
         try {
             val ins = client.getInputStream()
@@ -130,8 +130,8 @@ class GwSocks5Server(
             out.flush()
 
             // --- pipe both ways until either side closes ---
-            val up = launch { pipe(client.getInputStream(), channel.out) }
-            val down = launch { pipe(channel.in, client.getOutputStream()) }
+            val up = launch { pipe(client.getInputStream(), channel.outputStream) }
+            val down = launch { pipe(channel.inputStream, client.getOutputStream()) }
             up.join(); down.join()
             runCatching { channel.close() }
             runCatching { client.close() }

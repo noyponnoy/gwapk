@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.bigo.ads.common.view.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inter_media_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:bigo_ad_radius="8dp">
+
+    <sg.bigo.ads.common.view.AdImageView
+        android:id="@+id/inter_media_main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <sg.bigo.ads.common.view.FixContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/inter_media_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:bigo_ad_radius="8dp">
+
+        <sg.bigo.ads.api.MediaView
+            android:id="@+id/inter_media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+    </sg.bigo.ads.common.view.FixContentFrameLayout>
+
+    <Button
+        android:id="@+id/inter_btn_mute"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bigo_ad_ic_media_mute"
+        android:visibility="invisible" />
+</sg.bigo.ads.common.view.RoundedFrameLayout>

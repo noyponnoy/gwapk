@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.witvpn.ikev2.app-mergeReleaseResources-91:/values-v15/values-v15.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\admin\\Videos\\gwvpn-apk-main\\app\\src\\main\\resIKEV2\\values-v15\\styles.xml",
+                    "from": {
+                        "startLines": "22,17",
+                        "startColumns": "4,4",
+                        "startOffsets": "989,715",
+                        "endLines": "24,20",
+                        "endColumns": "12,12",
+                        "endOffsets": "1146,981"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,215",
+                        "endLines": "4,8",
+                        "endColumns": "12,12",
+                        "endOffsets": "210,478"
+                    }
+                }
+            ]
+        }
+    ]
+}

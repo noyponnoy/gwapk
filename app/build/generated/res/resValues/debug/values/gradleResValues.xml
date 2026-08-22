@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Value from default config. -->
+    <string name="base_url" translatable="false">https://gwapi.vpnhub.xyz/vpn/api/v1/</string>
+    <!-- Value from default config. -->
+    <string name="subscription_url" translatable="false">https://sub.yarik.app/jzp2_Fc1rqXDrBu1</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/inter_layout_end_page"
+    android:background="#30000000">
+
+    <FrameLayout
+        android:id="@+id/inter_end_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_above="@id/word_icon_container"
+        android:background="@android:color/white">
+
+
+    </FrameLayout>
+    <ViewStub
+        android:id="@+id/bigo_web_loading_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/bigo_ad_webview_loading" />/>
+
+    <FrameLayout
+        android:id="@+id/word_icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -41,18 +41,18 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        resValue("string", "base_url", "https://api-gwvpn-app.vpnhub.xyz/vpn/api/v1/")
+        resValue("string", "base_url", "https://gwapi.vpnhub.xyz/vpn/api/v1/")
 
         // Ссылка-подписка (subscription) со списком vless/hysteria2 нод.
         // Как и base_url — это лишь ДЕФОЛТ; актуальное значение приходит из
         // Firebase Remote Config (ключ subscription_url) и может быть заменено
         // из консоли Firebase без выпуска обновления в Google Play.
-        resValue("string", "subscription_url", "https://sub.gw-vpn.click/jzp2_Fc1rqXDrBu1")
+        resValue("string", "subscription_url", "https://sub.yarik.app/jzp2_Fc1rqXDrBu1")
 
         // CAS.AI application identifier from the CAS dashboard.
         buildConfigField("String", "CAS_ID", '"app.greywebs.vpn"')
 
-        buildConfigField("String", "GRAYS_BILLING_URL", '"https://api-gwvpn-app.vpnhub.xyz/vpn/client/payment/new?userId=%s"')
+        buildConfigField("String", "GRAYS_BILLING_URL", '"https://gwapi.vpnhub.xyz/vpn/client/payment/new?userId=%s"')
         buildConfigField("boolean", "CHECK_IN_APP_UPDATES", "true")
         buildConfigField("boolean", "CONNECTION_TIME_LIMIT_FOR_FREE", "false")
         buildConfigField("long", "CONNECTION_TIME_LIMIT_MINUTES", "120")
@@ -75,7 +75,8 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -119,6 +120,10 @@ ext.retrofit_version = "2.4.0"
 ext.okhttp_version = "4.12.0"
 ext.gson_version = "2.9.0"
 ext.retrofitVersion = '2.11.0'
+
+configurations.all {
+    exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+}
 
 dependencies {
     coreLibraryDesugaring libs.desugarJdkLibs
@@ -198,4 +203,7 @@ dependencies {
     // Vyom xray SDK (replaces old libv2ray.aar with 16KB page-aligned libraries)
     implementation project(':vyom-tun-sdk')
     implementation project(':amneziawg-tunnel')
+    implementation(project(':gw-tunnel')) {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+    }
 }

@@ -1,0 +1,429 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
+-keep class androidx.room.MultiInstanceInvalidationService { <init>(); }
+-keep class androidx.startup.InitializationProvider { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.RescheduleReceiver { <init>(); }
+-keep class androidx.work.impl.background.systemalarm.SystemAlarmService { <init>(); }
+-keep class androidx.work.impl.background.systemjob.SystemJobService { <init>(); }
+-keep class androidx.work.impl.diagnostics.DiagnosticsReceiver { <init>(); }
+-keep class androidx.work.impl.foreground.SystemForegroundService { <init>(); }
+-keep class androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver { <init>(); }
+-keep class com.android.billingclient.api.ProxyBillingActivity { <init>(); }
+-keep class com.brandio.ads.DioInterstitialActivity { <init>(); }
+-keep class com.brandio.ads.DioVideoInterstitialActivity { <init>(); }
+-keep class com.brandio.ads.device.PermissionsHandler { <init>(); }
+-keep class com.brandio.ads.worker.InRingAdService { <init>(); }
+-keep class com.cleveradssolutions.internal.integration.IntegrationPageActivity { <init>(); }
+-keep class com.cleveradssolutions.internal.services.CASInitProvider { <init>(); }
+-keep class com.facebook.ads.AudienceNetworkActivity { <init>(); }
+-keep class com.facebook.ads.AudienceNetworkContentProvider { <init>(); }
+-keep class com.google.android.datatransport.runtime.backends.TransportBackendDiscovery { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver { <init>(); }
+-keep class com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService { <init>(); }
+-keep class com.google.android.gms.ads.AdActivity { <init>(); }
+-keep class com.google.android.gms.ads.AdService { <init>(); }
+-keep class com.google.android.gms.ads.MobileAdsInitProvider { <init>(); }
+-keep class com.google.android.gms.ads.NotificationHandlerActivity { <init>(); }
+-keep class com.google.android.gms.ads.OutOfContextTestingActivity { <init>(); }
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementJobService { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+-keep class com.google.android.play.core.common.PlayCoreDialogWrapperActivity { <init>(); }
+-keep class com.google.android.play.core.hsdp.service.HsdpShimActivity { <init>(); }
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+-keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
+-keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+-keep class com.google.firebase.sessions.SessionLifecycleService { <init>(); }
+-keep class com.inmobi.ads.rendering.InMobiAdActivity { <init>(); }
+-keep class com.inmobi.ads.rendering.InMobiInAppBrowserActivity { <init>(); }
+-keep class com.ironsource.lifecycle.IronsourceLifecycleProvider { <init>(); }
+-keep class com.ironsource.lifecycle.LevelPlayActivityLifecycleProvider { <init>(); }
+-keep class com.ironsource.mediationsdk.testSuite.TestSuiteActivity { <init>(); }
+-keep class com.ironsource.sdk.controller.ControllerActivity { <init>(); }
+-keep class com.ironsource.sdk.controller.InterstitialActivity { <init>(); }
+-keep class com.ironsource.sdk.controller.OpenUrlActivity { <init>(); }
+-keep class com.mbridge.msdk.activity.MBCommonActivity { <init>(); }
+-keep class com.mbridge.msdk.config.activity.MBRewardVideoActivity { <init>(); }
+-keep class com.mbridge.msdk.config.component.status.MBComponentLifecycleProvider { <init>(); }
+-keep class com.mbridge.msdk.foundation.same.broadcast.NetWorkChangeReceiver { <init>(); }
+-keep class com.mbridge.msdk.out.LoadingActivity { <init>(); }
+-keep class com.mbridge.msdk.reward.player.MBRewardVideoActivity { <init>(); }
+-keep class com.monetrix.adsdk.api.AdActivity { <init>(); }
+-keep class com.monetrix.adsdk.api.CompanionAdActivity { <init>(); }
+-keep class com.monetrix.adsdk.api.LandingStyleableActivity { <init>(); }
+-keep class com.monetrix.adsdk.controller.provider.MonetrixProvider { <init>(); }
+-keep class com.monetrix.adsdk.inner.mraid.MraidVideoActivity { <init>(); }
+-keep class com.squareup.picasso.PicassoProvider { <init>(); }
+-keep class com.unity3d.ads.adplayer.FullScreenWebViewDisplay { <init>(); }
+-keep class com.unity3d.ironsourceads.internal.services.InlineStoreActivity { <init>(); }
+-keep class com.unity3d.services.ads.adunit.AdUnitActivity { <init>(); }
+-keep class com.unity3d.services.ads.adunit.AdUnitSoftwareActivity { <init>(); }
+-keep class com.unity3d.services.ads.adunit.AdUnitTransparentActivity { <init>(); }
+-keep class com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity { <init>(); }
+-keep class com.vungle.ads.VungleProvider { <init>(); }
+-keep class com.vungle.ads.internal.ui.VungleActivity { <init>(); }
+-keep class com.witvpn.gw.tunnel.GwVpnService { <init>(); }
+-keep class com.witvpn.ikev2.presentation.MyApp { <init>(); }
+-keep class com.witvpn.ikev2.presentation.ui.FCMService { <init>(); }
+-keep class com.witvpn.ikev2.presentation.ui.MainActivity { <init>(); }
+-keep class com.yandex.mobile.ads.common.AdActivity { <init>(); }
+-keep class com.yandex.mobile.ads.core.initializer.YandexAdsInitializeProvider { <init>(); }
+-keep class com.yandex.mobile.ads.features.debugpanel.data.local.DebugPanelFileProvider { <init>(); }
+-keep class com.yandex.mobile.ads.features.debugpanel.ui.IntegrationInspectorActivity { <init>(); }
+-keep class com.ysocorp.ysonetwork.webview.YNWebViewActivity { <init>(); }
+-keep class io.appmetrica.analytics.internal.AppMetricaService { <init>(); }
+-keep class io.appmetrica.analytics.internal.PreloadInfoContentProvider { <init>(); }
+-keep class io.github.vyomtunnel.sdk.VyomBootReceiver { <init>(); }
+-keep class io.github.vyomtunnel.sdk.VyomPermissionActivity { <init>(); }
+-keep class io.github.vyomtunnel.sdk.VyomVpnService { <init>(); }
+-keep class org.amnezia.awg.backend.GoBackend$VpnService { <init>(); }
+-keep class org.strongswan.android.logic.CharonVpnService { <init>(); }
+-keep class org.strongswan.android.logic.VpnStateService { <init>(); }
+-keep class org.strongswan.android.ui.LogActivity { <init>(); }
+-keep class org.strongswan.android.ui.MainIKEV2Activity { <init>(); }
+-keep class org.strongswan.android.ui.RemediationInstructionsActivity { <init>(); }
+-keep class org.strongswan.android.ui.SelectedApplicationsActivity { <init>(); }
+-keep class org.strongswan.android.ui.SettingsActivity { <init>(); }
+-keep class org.strongswan.android.ui.TrustedCertificateImportActivity { <init>(); }
+-keep class org.strongswan.android.ui.TrustedCertificatesActivity { <init>(); }
+-keep class org.strongswan.android.ui.VpnProfileControlActivity { <init>(); }
+-keep class org.strongswan.android.ui.VpnProfileDetailActivity { <init>(); }
+-keep class org.strongswan.android.ui.VpnProfileImportActivity { <init>(); }
+-keep class org.strongswan.android.ui.VpnProfileSelectActivity { <init>(); }
+-keep class org.strongswan.android.ui.VpnTileService { <init>(); }
+-keep class sg.bigo.ads.ad.splash.AdSplashActivity { <init>(); }
+-keep class sg.bigo.ads.ad.splash.LandscapeAdSplashActivity { <init>(); }
+-keep class sg.bigo.ads.api.AdActivity { <init>(); }
+-keep class sg.bigo.ads.api.CompanionAdActivity { <init>(); }
+-keep class sg.bigo.ads.api.LandingStyleableActivity { <init>(); }
+-keep class sg.bigo.ads.api.LandscapeAdActivity { <init>(); }
+-keep class sg.bigo.ads.api.LandscapeCompanionAdActivity { <init>(); }
+-keep class sg.bigo.ads.api.PopupAdActivity { <init>(); }
+-keep class sg.bigo.ads.controller.form.AdFormActivity { <init>(); }
+-keep class sg.bigo.ads.controller.provider.BigoAdsProvider { <init>(); }
+-keep class sg.bigo.ads.core.mraid.MraidVideoActivity { <init>(); }
+-keep class android.widget.Space { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.app.AlertController$RecycleListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ActionMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ExpandedMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarContextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActionMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ActivityChooserView$InnerLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AlertDialogLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.AppCompatButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ButtonBarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ContentFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.DialogTitle { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.FitWindowsLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SearchView$SearchAutoComplete { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.SwitchCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.Toolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.browser.browseractions.BrowserActionsFallbackMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.cardview.widget.CardView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.Barrier { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.ConstraintLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.constraintlayout.widget.Guideline { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.coordinatorlayout.widget.CoordinatorLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.ContentLoadingProgressBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.core.widget.NestedScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.fragment.app.FragmentContainerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.navigation.fragment.NavHostFragment { <init>(); }
+
+-keep class androidx.preference.UnPressableLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.preference.internal.PreferenceImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.recyclerview.widget.RecyclerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class androidx.viewpager.widget.ViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.airbnb.lottie.LottieAnimationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.cleveradssolutions.sdk.nativead.CASChoicesView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.cleveradssolutions.sdk.nativead.CASMediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.github.mikephil.charting.charts.LineChart { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.gms.ads.nativead.MediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.gms.ads.nativead.NativeAdView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.bottomnavigation.BottomNavigationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.button.MaterialButtonToggleGroup { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.chip.Chip { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.datepicker.MaterialCalendarGridView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.BaselineLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.CheckableImageButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.internal.NavigationMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.progressindicator.CircularProgressIndicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.Snackbar$SnackbarLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.snackbar.SnackbarContentLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.tabs.TabItem { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.tabs.TabLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputEditText { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.textfield.TextInputLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ChipTextInputComboView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockFaceView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.ClockHandView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.material.timepicker.TimePickerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.google.android.play.core.hsdp.service.HsdpLoadingPanelContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBRotationView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeBaitClickView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeDyImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeFramLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeSegmentsProgressBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.MBridgeTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.cusview.SoundImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.dycreator.baseview.rewardpopview.MBAcquireRewardPopView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.mbsignalcommon.windvane.WindVaneWebView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.nativex.view.WindVaneWebViewForNV { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.nativex.view.mbfullview.StarLevelLayoutView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.playercommon.PlayerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.splash.view.nativeview.MBNoRecycledCrashImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.splash.view.nativeview.MBSplashClickView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.bt.module.MBTempContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.bt.module.MBridgeBTContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.dynview.ordercamp.AblGridView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.dynview.widget.MBridgeLevelLayoutView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.dynview.widget.MBridgeRelativeLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.dynview.widget.ObservableScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.module.MBridgeContainerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.video.module.MBridgeVideoView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.videocommon.view.MyImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.videocommon.view.RoundImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.videocommon.view.StarLevelView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.mbridge.msdk.widget.FeedBackButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.feed.ui.view.FeedItemContainerView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.CallToActionView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.ColorizedRatingView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.CroppedTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.ExtendedTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.ExtendedViewContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.fullscreen.template.view.RoundImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.instream.view.InstreamMuteView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.nativeads.CustomizableMediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.nativeads.ExtendedNativeAdView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.nativeads.video.view.CorePlaybackControlsContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.nativeads.view.pager.MultiBannerControlsContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetization.ads.video.playback.view.ExtendedVideoAdControlsContainer { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.ad.interstitial.base.AdCountDownButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.ad.interstitial.base.CustomTouchImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.api.adview.AdOptionsView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.api.adview.MediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.api.adview.NativeAdView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.monetrix.adsdk.base.view.RoundedFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.ui.PolicyFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.billing.BillingFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.billing.grays.GraysBillingFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.connect.ConnectFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.entropy.MnemonicFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.otp.ConfirmOTPFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.otp.OTPFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.qr.QRFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.restoreAccount.RestoreFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.servers.ServersFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.splash.SplashFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.splittunnel.SplitTunnelFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.ui.support.SupportFragment { <init>(...); }
+
+-keep class com.witvpn.ikev2.presentation.widget.AuthToolbar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.InputCode { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.InputCodeGroup { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.InputView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.NonSwipeAbleViewPager { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.SelectionItemView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.bottomnav.BottomNavBar { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.bottomnav.BottomNavItem { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class com.witvpn.ikev2.presentation.widget.snackbar.CustomSnackbarView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class org.strongswan.android.ui.ImcStateFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.LogFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.RemediationInstructionFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.RemediationInstructionsFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.VpnProfileListFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.VpnStateFragment { <init>(); }
+
+-keep class org.strongswan.android.ui.widget.CheckableLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class org.strongswan.android.ui.widget.TextInputLayoutHelper { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.ad.interstitial.AdCountDownButton { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.ad.interstitial.CustomTouchImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.ad.interstitial.MaximumHeightMediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.ad.interstitial.multi_img.view.IconListView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.api.AdOptionsView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.api.MediaView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.api.NativeAdView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.AdImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.AutoNextLineLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.FixContentFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.HeightScrollView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.Indicator { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.MixtureTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.PrivacyCheckBox { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.RealtimeBlurLinearLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.RoundedFrameLayout { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.RoundedImageView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.VerticalTextView { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.ViewFlow { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.WrapContentViewFlow { <init>(android.content.Context, android.util.AttributeSet); }
+
+-keep class sg.bigo.ads.common.view.YandexWarningTextView { <init>(android.content.Context, android.util.AttributeSet); }
+

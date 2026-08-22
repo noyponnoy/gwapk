@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sg.bigo.ads.common.view.RoundedFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/inter_ad_label_layout"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bigo_ad_label_background">
+        <TextView
+            android:id="@+id/inter_advertiser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingLeft="3dp"
+            android:paddingStart="3dp"
+            android:paddingTop="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:maxWidth="240dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="#ffffffff"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/inter_ad_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5dp"
+            android:layout_toEndOf="@+id/inter_advertiser"
+            android:gravity="center"
+            android:paddingTop="1dp"
+            android:paddingEnd="2.5dp"
+            android:paddingRight="2.5dp"
+            android:paddingBottom="1dp"
+            android:text="Ad"
+            android:textColor="#ffffffff"
+            android:textSize="9dp"
+            tools:ignore="ContentDescription,HardcodedText,SpUsage" />
+    </RelativeLayout>
+
+
+</sg.bigo.ads.common.view.RoundedFrameLayout>

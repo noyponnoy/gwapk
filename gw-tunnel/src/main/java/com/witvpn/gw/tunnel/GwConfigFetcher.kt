@@ -2,6 +2,7 @@ package com.witvpn.gw.tunnel
 
 import com.witvpn.gw.crypto.GwCrypto
 import com.witvpn.gw.model.GwEnvelope
+import com.witvpn.gw.model.GwServerConfig
 import com.witvpn.gw.model.GwServerResponse
 import com.witvpn.gw.util.GwLog
 import kotlinx.coroutines.Dispatchers
@@ -83,9 +84,9 @@ class GwConfigFetcher(
     private fun parseMeta(o: JSONObject?) = com.witvpn.gw.model.GwServerMeta(
         id = o?.optString("id"), name = o?.optString("name"),
         country = o?.optString("country"), country_code = o?.optString("country_code"),
-        state = o?.optString("state"), premium = o?.optBoolean("premium", false),
-        recommend = o?.optBoolean("recommend", false), priority = o?.optInt("priority", 0),
-        status = o?.optBoolean("status", true) ?: true,
+        state = o?.optString("state"), premium = o?.optBoolean("premium") ?: false,
+        recommend = o?.optBoolean("recommend") ?: false, priority = o?.optInt("priority") ?: 0,
+        status = o?.optBoolean("status") ?: true,
     )
 
     private fun parseEnvelope(o: JSONObject?) = GwEnvelope(

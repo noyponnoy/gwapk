@@ -1,0 +1,29 @@
+<lint-module
+    format="1"
+    dir="C:\Users\admin\Videos\gwvpn-apk-main\amneziawg-tunnel"
+    name=":amneziawg-tunnel"
+    type="LIBRARY"
+    maven="Strong VPN:amneziawg-tunnel:unspecified"
+    agpVersion="8.13.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\admin\AppData\Local\Android\Sdk\platforms\android-35\android.jar;C:\Users\admin\AppData\Local\Android\Sdk\build-tools\35.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      disable="LongLogTag,NewApi"
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true">
+    <severities>
+      <severity
+        id="LongLogTag"
+        severity="IGNORE" />
+      <severity
+        id="NewApi"
+        severity="IGNORE" />
+    </severities>
+  </lintOptions>
+  <variant name="release"/>
+</lint-module>

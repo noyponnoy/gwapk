@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.witvpn.ikev2.presentation.ui.splittunnel.SplitTunnelViewModel
